@@ -1,0 +1,7 @@
+.ourSchool {
+  @include block();
+  margin-top: 160px;
+
+  @include b();
+  
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'MazzardH';
+  src: local('MazzardH-Regular'),
+    url('../../fonts/MazzardH-Regular.eot?') format('eot'), 
+    url('../../fonts/MazzardH-Regular.woff') format('woff'), 
+    url('../../fonts/MazzardH-Regular.ttf') format('truetype'),
+    url('../../fonts/MazzardH-Regular.svg#MazzardH-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MazzardH';
+  src: local('MazzardH-SemiBold'),
+    url('../../fonts/MazzardH-SemiBold.eot?') format('eot'), 
+    url('../../fonts/MazzardH-SemiBold.woff') format('woff'), 
+    url('../../fonts/MazzardH-SemiBold.ttf') format('truetype'),
+    url('../../fonts/MazzardH-SemiBold.svg#MazzardH-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ZonaPro';
+  src: local('ZonaPro-SemiBold'),
+    url('../../fonts/ZonaPro-SemiBold.eot?') format('eot'), 
+    url('../../fonts/ZonaPro-SemiBold.woff') format('woff'), 
+    url('../../fonts/ZonaPro-SemiBold.ttf') format('truetype'),
+    url('../../fonts/ZonaPro-SemiBold.svg#ZonaPro-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ZonaPro';
+  src: local('ZonaPro-SemiBold'),
+    url('../../fonts/ZonaPro-Bold.eot?') format('eot'), 
+    url('../../fonts/ZonaPro-Bold.woff') format('woff'), 
+    url('../../fonts/ZonaPro-Bold.ttf') format('truetype'),
+    url('../../fonts/ZonaPro-Bold.svg#ZonaPro-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

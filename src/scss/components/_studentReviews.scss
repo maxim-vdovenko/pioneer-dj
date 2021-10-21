@@ -1,0 +1,66 @@
+.studentReviews {
+  @include block();
+  margin-top: 165px;
+
+  &__cont {
+    @include flex();
+    margin: 55px -12px 0 -12px;
+  }
+
+  &__item {
+    @include inline_block();
+    width: 16.66%;
+    padding: 0 12px;
+  }
+
+  &__box {
+    @include block();
+  }
+
+  &__img {
+    @include block();
+    height: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.2);
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: rgba(196, 196, 196, 0.1);
+      backdrop-filter: blur(5px);
+    }
+  }
+
+  &__name {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    left: 10px;
+    bottom: 10px;
+    min-height: 28px;
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.3);
+    background-color: rgba(174, 174, 174, 0.3);
+    border: 1px solid rgba(238, 238, 238, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color_white;
+  }
+}

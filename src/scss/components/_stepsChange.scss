@@ -1,0 +1,58 @@
+.stepsChange {
+  @include block();
+  margin-top: 163px;
+
+  &__cont {
+    @include flex();
+    margin: 56px -12px 0 -12px;
+  }
+
+  &__item {
+    @include flex();
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  &__box {
+    @include flex();
+    flex-direction: column;
+    min-height: 258px;
+    padding: 30px;
+    background: linear-gradient(104.22deg, #DDDADD 2.77%, #C1CAC9 96.39%);
+    border-radius: 12px;
+
+    &-numbering {
+      @include flex();
+      justify-content: center;
+      align-items: center;
+      max-width: 30px;
+      height: 30px;
+      margin-bottom: 24px;
+      background-color: #fff;
+      border-radius: 1000px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &-value {
+      @include block();
+      margin-bottom: 24px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: $color_text_dark;
+    }
+
+    &-text {
+      @include block();
+
+      > p {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color_text_dark;
+      }
+    }
+  }
+}

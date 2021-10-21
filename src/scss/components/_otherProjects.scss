@@ -1,0 +1,7 @@
+.otherProjects {
+  @include block();
+  margin-top: 160px;
+  margin-bottom: 200px;
+  
+  @include b(green);
+}

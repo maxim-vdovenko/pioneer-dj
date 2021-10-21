@@ -1,0 +1,23 @@
+.logoSlider {
+  @include block();
+  margin-top: 164px;
+
+  &__cont {
+    @include flex();
+    margin-top: 56px;
+    overflow-x: auto;
+  }
+
+  &__box {
+    @include inline_block();
+    margin: 0 12px;
+    
+    a {
+      position: relative;
+    }
+
+    img {
+      position: relative;
+    }
+  }
+}

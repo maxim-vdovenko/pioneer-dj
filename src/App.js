@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from './components/Header';
+import PopularCourses from './components/PopularCourses';
+import Teachers from './components/Teachers';
+import StudentReviews from './components/StudentReviews';
+import TrialLesson from './components/TrialLesson';
+import LogoSlider from './components/LogoSlider';
+import StepsChange from './components/StepsChange';
+import VideoBox from './components/VideoBox';
+import OurSchool from './components/OurSchool';
+import News from './components/News';
+import HelpChoosing from './components/HelpChoosing';
+import OtherProjects from './components/OtherProjects';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="totalContainer">
+        <Header />
+        <PopularCourses />
+        <Teachers />
+        <StudentReviews />
+        <TrialLesson />
+        <LogoSlider />
+        <StepsChange />
+        <VideoBox />
+        <OurSchool />
+        <News />
+        <HelpChoosing />
+        <OtherProjects />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App

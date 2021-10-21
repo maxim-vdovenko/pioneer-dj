@@ -1,0 +1,103 @@
+.popularCourses {
+  @include block();
+
+  &__cont {
+    @include flex();
+    margin: 62px -12px 0 -12px;
+  }
+
+  &__item {
+    @include flex();
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  &__box {
+    @include flex();
+    flex-direction: column;
+    min-height: 460px;
+    padding: 32px 30px 36px 30px;
+    background: linear-gradient(104.22deg, #DDDADD 2.77%, #C1CAC9 96.39%);
+    border-radius: 12px;
+
+    &-title {
+      @include block();
+      padding-right: 30px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: $color_text_dark;
+    }
+
+    &-text {
+      @include block();
+      margin-top: 22px;
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #1F1F1F;
+      }
+    }
+
+    &-list {
+      @include flex();
+      flex-wrap: wrap;
+      margin-top: 24px;
+
+      li {
+        @include inline_block();
+        width: 50%;
+        padding-bottom: 24px;
+      }
+
+      b {
+        @include block();
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color_text_dark;
+      }
+
+      span {
+        @include block();
+        font-size: 14px;
+        line-height: 20px;
+        color: $color_text_dark;
+      }
+    }
+
+    &-foot {
+      @include flex();
+      justify-content: space-between;
+      align-items: center;
+      margin: auto 0 0 0;
+    }
+
+    &-more {
+      position: relative;
+      padding-top: 1px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      color: $color_text_dark;
+      text-decoration: none;
+    }
+
+    &-video {
+      @include flex();
+      @include image('chevron-right.svg', 12px 15px, left);
+      align-items: center;
+      padding: 1px 0 0 24px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      color: $color_text_dark;
+      text-decoration: none;
+    }
+  }
+}

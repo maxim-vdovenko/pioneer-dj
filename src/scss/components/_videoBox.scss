@@ -1,0 +1,25 @@
+.videoBox {
+  @include block();
+  margin-top: 60px;
+
+  &__box {
+    @include block();
+    height: 320px;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .button-play {
+    left: 50%;
+    top: 50%;
+    margin: -66px 0 0 -66px;
+  }
+}
