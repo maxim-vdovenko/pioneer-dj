@@ -11,6 +11,11 @@
       line-height: 30px;
       color: $color_text_dark;
       letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -25,6 +30,14 @@
       left: 50%;
       bottom: -41px;
       margin-left: -30px;
+
+      @media (max-width: $screen_md) {
+        left: auto;
+        right: 14px;
+        top: -39px;
+        bottom: auto;
+        margin-left: 0;
+      }
 
       span {
         margin: 0 1px;
@@ -46,6 +59,10 @@
     -khtml-user-select: none;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: $screen_md) {
+      margin-top: 80px;
+    }
     
     &-box {
       @include block();
@@ -116,15 +133,31 @@
       background-color: transparent;
       border: none;
       cursor: pointer;
+
+      @media (max-width: $screen_md) {
+        left: auto;
+        bottom: auto;
+        top: -47px;
+      }
     }
 
     .slick-prev {
       margin-left: -47px;
       transform: rotate(180deg);
+
+      @media (max-width: $screen_md) {
+        margin-left: 0;
+        right: 57px;
+      }
     } 
 
     .slick-next {
       margin-left: 17px;
+
+      @media (max-width: $screen_md) {
+        margin-left: 0;
+        right: 0;
+      }
     } 
   }
 }

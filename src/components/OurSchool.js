@@ -60,7 +60,7 @@ export default class OurSchool extends Component {
 
         <Slick className="ourSchool__slider" {...settings}>
           {sliderElements.map((element, index) => (
-            <div key={index} className="ourSchool__slider-box"><img src={element.src} alt="img" /></div>
+            <div key={index} className="ourSchool__slider-box"><a href="#"><img src={element.src} alt="img" /></a></div>
           ))}
         </Slick>
 
@@ -84,6 +84,7 @@ export default class OurSchool extends Component {
           <div className="ourSchool__description">
             <p>Pioneer DJ School — специализированная площадка для выступлений, лекций, воркшопов и других ивентов</p>
           </div>
+          <div className="titleLink"><a href="#">Подробнее о школе</a></div>
         </div>
 
         { this.sliderSlick() }
