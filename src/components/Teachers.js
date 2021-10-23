@@ -7,15 +7,6 @@ import Img4 from '../img/teachers/img-4.jpg';
 
 export default class Teachers extends Component {
   render() {
-
-    // function importAll(r) {
-    //   let images = {};
-    //   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    //   return images;
-    // }
-  
-    // let images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
-
     return(
       <div className="teachers">
 
@@ -84,10 +75,9 @@ export default class Teachers extends Component {
               </div>
             </div>
 
-
-
-
           </div>
+
+          <div className="titleLink"><a href="#">Все преподаватели</a></div>
 
         </div>
        

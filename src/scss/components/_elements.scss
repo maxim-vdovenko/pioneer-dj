@@ -17,6 +17,11 @@
       font-weight: 700;
       font-size: 40px;
       line-height: 56px;
+
+      @media (max-width: $screen_md) {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
 
     &-dark {
@@ -40,6 +45,51 @@
     color: $color_text_dark;
     text-decoration: none;
     white-space: pre;
+
+    @media (max-width: $screen_md) {
+      display: none;
+    }
+  }
+}
+
+.titleLink {
+  position: relative;
+  display: none;
+  margin-top: 35px;
+
+  @media (max-width: $screen_md) {
+    display: block;
+  }
+
+  a {
+    @include image('arrow-dark-right.svg', 8px 12px, right);
+    position: relative;
+    padding-right: 19px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: $color_text_dark;
+    text-decoration: none;
+    white-space: pre;
+  }
+}
+
+.inputBox {
+  @include block();
+
+  &__cont {
+    @include block();
+    width: 100%;
+    height: 44px;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #C6C6C6;
   }
 }
 
@@ -55,6 +105,7 @@
   line-height: 16px;
   letter-spacing: 0.01em;
   color: $color_text_dark;
+  border: none;
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
@@ -119,6 +170,11 @@
   text-decoration: none;
   cursor: pointer;
 
+  @media (max-width: $screen_md) {
+    width: 106px;
+    height: 106px;
+  }
+
   &:before {
     @include image('chevron-right.svg', contain, center);
     position: absolute;
@@ -128,7 +184,7 @@
     top: 50%;
     margin: -8px 0 0 -8px;
     content: '';
-    transition: transform 0.35s;
+    transition: transform 0.25s;
   }
 
   &:hover {

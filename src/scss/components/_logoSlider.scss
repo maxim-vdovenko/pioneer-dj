@@ -6,11 +6,20 @@
     @include flex();
     margin-top: 56px;
     overflow-x: auto;
+
+    @media (max-width: $screen_md) {
+      margin-top: 38px;
+      padding: 0 7px;
+    }
   }
 
   &__box {
     @include inline_block();
     margin: 0 12px;
+
+    @media (max-width: $screen_md) {
+      margin: 0 8px;
+    }
     
     a {
       position: relative;

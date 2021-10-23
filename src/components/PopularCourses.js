@@ -78,6 +78,8 @@ export default class PopularCourses extends Component {
 
           </div>
 
+          <div className="titleLink"><a href="#">Все курсы</a></div>
+
         </div>
        
       </div>

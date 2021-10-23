@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HeaderMenu from './HeaderMenu';
+import MobileMenu from './MobileMenu';
 import HeaderFon from '../img/header/Pioneer-DJ-School.jpg';
 
 export default class Header extends Component {
@@ -22,7 +23,16 @@ export default class Header extends Component {
             <div className="header__top-menu">
               <HeaderMenu />
               <a className="header__phone" href="#">+ 7 916  942 5248</a>
+
+              <div className="header__navMobile">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
             </div>
+
+            <MobileMenu />
 
           </div>
 

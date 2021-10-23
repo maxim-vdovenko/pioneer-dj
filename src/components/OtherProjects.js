@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Title from './Title';
+import ImgLogo from '../img/logos.png'; 
 
 export default class OtherProjects extends Component {
   render() {
@@ -12,11 +13,30 @@ export default class OtherProjects extends Component {
           ]}
         />
 
-        <div className="container">
-          <div className="otherProjects__cont">
-            
+        <div className="otherProjects__cont">
+
+          <div className="otherProjects__box">
+            <a href="#"><img src={ImgLogo} alt="img" /></a>
           </div>
+
+          <div className="otherProjects__box">
+            <a href="#"><img src={ImgLogo} alt="img" /></a>
+          </div>
+
+          <div className="otherProjects__box">
+            <a href="#"><img src={ImgLogo} alt="img" /></a>
+          </div>
+
+          <div className="otherProjects__box">
+            <a href="#"><img src={ImgLogo} alt="img" /></a>
+          </div>
+
+          <div className="otherProjects__box">
+            <a href="#"><img src={ImgLogo} alt="img" /></a>
+          </div>
+
         </div>
+
       </div>
     ) 
   }

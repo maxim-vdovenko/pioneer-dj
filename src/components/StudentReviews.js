@@ -20,6 +20,7 @@ export default class StudentReviews extends Component {
         />
 
         <div className="container">
+
           <div className="studentReviews__cont">
 
             <div className="studentReviews__item">
@@ -65,7 +66,9 @@ export default class StudentReviews extends Component {
             </div>
    
           </div>
+
         </div>
+
       </div>
     ) 
   }

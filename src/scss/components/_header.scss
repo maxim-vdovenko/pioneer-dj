@@ -1,6 +1,11 @@
 .header {
+  $header: &;
   @include block();
   margin-bottom: 242px;
+
+  @media (max-width: $screen_md) {
+    margin-bottom: 200px;
+  }
 
   #{$cont} {
     min-height: 588px;
@@ -12,23 +17,35 @@
     min-width: 197px;
     height: 23px;
     margin-top: 31px;
+
+    @media (max-width: $screen_lg) {
+      min-width: 170px;
+      height: 20px;
+      margin-top: 30px;
+    }
   }
 
   &__menu {
     $menu: &;
-    @include flex();
+    display: flex;
     margin: 18px 0;
 
-    li {
-      @include inline_block();
+    @media (max-width: $screen_lg) {
+      display: none;
     }
 
-    a {
-      @include flex();
+    > li {
+      display: inline-block;
+    }
+
+    > li > a, 
+    #{$menu}-arrow {
+      position: static;
+      display: block;
       align-items: center;
       height: 46px;
-      padding: 0 24px;
-      margin: 0 6px;
+      padding-top: 14px;
+      margin: 0 30px;
       border: 1px solid transparent;
       border-radius: 4px;
       font-weight: 600;
@@ -38,17 +55,169 @@
       letter-spacing: 0.01em;
       text-decoration: none;
 
-      &#{$menu}-arrow {
-        border-color: $color_white;
-        margin-right: 22px;
+      @media (max-width: $screen_xl) {
+        margin: 0 20px;
+      }
+    }
 
-        &:after {
-          @include inline_block();
-          @include image('arrow-white-down.svg', contain, center);
+    #{$menu}-arrow {
+      border-color: $color_white;
+      padding: 0;
+      margin-right: 22px;
+
+      > a {
+        padding: 14px 48px 0 20px;
+        position: relative;
+        height: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+        letter-spacing: inherit;
+        text-decoration: none;
+
+        &:before, &:after {
+          position: absolute;
+          top: 50%;
+          right: 25px;
           width: 12px;
           height: 8px;
-          margin-left: 8px;
+          margin-top: -5px;
           content: '';
+        }
+
+        &:before {
+          @include image('arrow-white-down.svg', contain, center);
+          opacity: 1;
+        }
+
+        &:after {
+          @include image('arrow-dark-down.svg', contain, center);
+          opacity: 0;
+        }
+      }
+
+      &:hover {
+        background: linear-gradient(104.22deg, #DDDADD 2.77%, #C1CAC9 96.39%);
+        border-color: transparent;
+
+        > a {
+          color: #1C1C1C;
+
+          &:before {
+            opacity: 0;
+          }
+
+          &:after {
+            opacity: 1;
+          }
+        }
+
+        #{$header}__submenu {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__submenu {
+    position: absolute;
+    display: none;
+    top: 64px;
+    right: 0;
+    width: 1100px;
+    min-height: 476px;
+    padding: 63px 60px 30px 60px;
+    background: linear-gradient(104.22deg, #DDDADD 2.77%, #C1CAC9 96.39%);
+    border-radius: 12px;
+
+    @media (max-width: $screen_xl) {
+      width: 900px;
+      min-height: auto;
+      padding: 35px 40px 25px 40px;
+    }
+
+    &-box {
+      position: relative;
+
+      &:nth-child(1) {
+        width: 26.5%;
+      }
+
+      &:nth-child(2) {
+        width: 26.5%;
+      }
+
+      &:nth-child(3) {
+        width: 26.5%;
+      }
+    }
+
+    &-name {
+      @include block();
+      max-width: 165px;
+      margin-bottom: 37px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: $color_text_dark;
+      text-decoration: none;
+
+      @media (max-width: $screen_xl) {
+        max-width: 145px;
+        font-size: 21px;
+        line-height: 27px;
+      }
+
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+
+    &-discount {
+      @include block();
+      margin-top: 38px;
+
+      > img {
+        @include block();
+        max-width: 200px;
+        border-radius: 12px;
+
+        @media (max-width: $screen_xl) {
+          max-width: 160px;
+        }
+      }
+    }
+
+    &-list {
+      @include block();
+
+      li {
+        @include block();
+        max-width: 200px;
+        margin-bottom: 24px;
+
+        @media (max-width: $screen_xl) {
+          max-width: 160px;
+          margin-bottom: 20px;
+        }
+      }
+
+      a {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color_text_dark;
+        text-decoration: none;
+
+        @media (max-width: $screen_xl) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        &:hover {
+          text-decoration:underline;
         }
       }
     }
@@ -62,6 +231,10 @@
     line-height: 16px;
     color: $color_text_white;
     text-decoration: none;
+
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
   }
 
   &__fon {
@@ -84,25 +257,43 @@
   &__top {
     @include flex();
     justify-content: space-between;
+    z-index: 1;
 
     &-logo {
       @include flex();
+
+      @media (max-width: $screen_lg) {
+        width: 50%;
+      }
     }
 
     &-menu {
       @include flex();
       align-items: center;
+
+      @media (max-width: $screen_lg) {
+        width: 50%;
+      }
     }
   }
 
   &__cont {
     @include block();
     padding-top: 76px;
+
+    @media (max-width: $screen_md) {
+      text-align: center;
+      padding-top: 52px;
+    }
   }
 
   &__text {
     @include block();
     margin-bottom: 50px;
+
+    @media (max-width: $screen_md) {
+      margin-bottom: 42px;
+    }
 
     > h1 {
       margin-bottom: 25px;
@@ -111,6 +302,12 @@
       font-size: 64px;
       line-height: 88px;
       color: $color_text_white;
+
+      @media (max-width: $screen_md) {
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+      }
     }
 
     > p {
@@ -119,6 +316,14 @@
       line-height: 30px;
       letter-spacing: 0.02em;
       color: #C6C6C6;
+
+      @media (max-width: $screen_md) {
+        margin: 0 auto;
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+      }
     }
   }
 
@@ -130,9 +335,17 @@
     bottom: -105px;
     overflow-y: auto;
 
+    @media (max-width: $screen_md) {
+      bottom: -81px;
+    }
+
     &-cont {
       @include inline_block();
       margin: 0 12px;
+
+      @media (max-width: $screen_md) {
+        margin: 0 8px;
+      }
     }
 
     &-unit {
@@ -154,6 +367,17 @@
       text-decoration: none;
       box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.2);
 
+      @media (max-width: $screen_lg) {
+        width: 264px;
+      }
+
+      @media (max-width: $screen_md) {
+        width: 220px;
+        height: 134px;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 20px 25px 20px 20px;
+      }
 
       &:before, &:after {
         position: absolute;
@@ -163,6 +387,11 @@
         left: 30px;
         content: '';
         transition: opacity 0.25s ease-in-out;
+
+        @media (max-width: $screen_md) {
+          top: 21px;
+          left: 22px;
+        }
       }
 
       &:before {
@@ -187,8 +416,60 @@
     }
   }
 
+  &__navMobile {
+    position: absolute;
+    display: none;
+    top: 26px;
+    right: 5px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    user-select: none;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+    }
+
+    span {
+      @include block();
+      height: 2px;
+      margin: 4px 4px;
+      background-color: #fff;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+
+    &.active {
+      span {
+        background-color: #0D1C2E;
+        
+        &:nth-child(1) {
+          transform: translate(0px, 6px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:nth-child(3) {
+            transform: translate(0px, -6px) rotate(45deg);
+        }
+      }
+    }
+  }
+
   .button-play {
     top: 250px;
     right: 296px;
+
+    @media (max-width: $screen_xl) {
+      right: 60px;
+    }
+
+    @media (max-width: $screen_md) {
+      top: auto;
+      bottom: 112px;
+      right: auto;
+      left: 50%;
+      margin-left: -53px;
+    }
   }
 }

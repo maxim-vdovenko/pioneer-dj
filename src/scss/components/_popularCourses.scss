@@ -4,12 +4,29 @@
   &__cont {
     @include flex();
     margin: 62px -12px 0 -12px;
+
+    @media (max-width: $screen_lg) {
+      overflow: auto;
+    }
+
+    @media (max-width: $screen_md) {
+      margin-top: 38px;
+    }
   }
 
   &__item {
     @include flex();
     flex: 1;
     padding: 0 12px;
+
+    @media (max-width: $screen_lg) {
+      flex: none;
+      width: 420px;
+    }
+
+    @media (max-width: $screen_md) {
+      width: 370px;
+    }
   }
 
   &__box {
@@ -20,6 +37,11 @@
     background: linear-gradient(104.22deg, #DDDADD 2.77%, #C1CAC9 96.39%);
     border-radius: 12px;
 
+    @media (max-width: $screen_md) {
+      min-height: 386px;
+      padding: 22px 20px 26px 20px;
+    }
+
     &-title {
       @include block();
       padding-right: 30px;
@@ -28,11 +50,21 @@
       font-size: 24px;
       line-height: 30px;
       color: $color_text_dark;
+
+      @media (max-width: $screen_md) {
+        padding-right: 0;
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     &-text {
       @include block();
       margin-top: 22px;
+
+      @media (max-width: $screen_md) {
+        margin-top: 16px;
+      }
 
       p {
         font-size: 14px;
@@ -45,6 +77,10 @@
       @include flex();
       flex-wrap: wrap;
       margin-top: 24px;
+
+      @media (max-width: $screen_md) {
+        margin-top: 16px;
+      }
 
       li {
         @include inline_block();

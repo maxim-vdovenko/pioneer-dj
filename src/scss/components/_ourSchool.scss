@@ -1,7 +1,91 @@
 .ourSchool {
   @include block();
-  margin-top: 160px;
-
-  @include b();
+  margin-top: 164px;
   
+  &__description {
+    @include block();
+    margin-top: 30px;
+
+    > p {
+      font-size: 18px;
+      line-height: 30px;
+      color: $color_text_dark;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__sliderCont {
+    @include block();
+
+    &-counter {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 60px;
+      left: 50%;
+      bottom: -41px;
+      margin-left: -30px;
+
+      span {
+        margin: 0 1px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: $color_text_dark;
+      }
+    }
+  }
+
+  &__slider {
+    @include block();
+    margin-top: 62px;
+    // margin: 0 -24px;
+    
+    &-box {
+      @include block();
+      overflow: hidden;
+      padding: 0 24px;
+      border-radius: 12px;
+      width: 668px !important;
+   
+      img {
+        @include block();
+        // width: 668px;
+        border-radius: 12px;
+      }
+    }
+
+    // .slick-slide {
+    //   @include b();
+    // }
+
+    .slick-track {
+      position: relative;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .slick-arrow {
+      @include image('arrow-slider-dark-right.svg', 7px auto, center);
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 50%;
+      bottom: -47px;
+      overflow: hidden;
+      color: transparent;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .slick-prev {
+      margin-left: -47px;
+      transform: rotate(180deg);
+    } 
+
+    .slick-next {
+      margin-left: 17px;
+    } 
+  }
 }

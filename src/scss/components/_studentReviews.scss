@@ -5,12 +5,25 @@
   &__cont {
     @include flex();
     margin: 55px -12px 0 -12px;
+
+    @media (max-width: $screen_lg) {
+      overflow: auto;
+    }
+
+    @media (max-width: $screen_md) {
+      margin-top: 38px;
+    }
   }
 
   &__item {
     @include inline_block();
     width: 16.66%;
     padding: 0 12px;
+
+    @media (max-width: $screen_lg) {
+      width: auto;
+      min-width: 200px;
+    }
   }
 
   &__box {

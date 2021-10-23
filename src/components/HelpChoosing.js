@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import InputMask from 'react-input-mask';
 
 export default class HelpChoosing extends Component {
   render() {
@@ -12,9 +13,17 @@ export default class HelpChoosing extends Component {
               <p>Остались вопросы? Не знаете, что выбрать? Оставьте свой номер, мы позвоним и ответим на все ваши вопросы</p>
             </div>
 
-            <div className="helpChoosing__form">
+            <form className="helpChoosing__form">
+
+              <div className="inputBox"><input className="inputBox__cont" type="text" placeholder="Ваше имя" /></div>
               
-            </div>
+              <div className="inputBox">
+                {<InputMask className="inputBox__cont" type="text" placeholder="Ваше телефон" mask="+7(999)999-9999" maskChar="_" pattern="[0-9]*" inputMode="numeric" />}
+              </div>
+            
+              <button className="button">Отправить</button>
+
+            </form>
 
           </div>
         </div>

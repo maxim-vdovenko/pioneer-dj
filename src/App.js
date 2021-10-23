@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import MobileMenu from './components/MobileMenu';
 import Header from './components/Header';
 import PopularCourses from './components/PopularCourses';
 import Teachers from './components/Teachers';
@@ -16,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="totalContainer">
+        {/* <MobileMenu /> */}
         <Header />
         <PopularCourses />
         <Teachers />

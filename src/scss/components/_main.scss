@@ -12,6 +12,10 @@
 body {
   background-color: $color_fon;
   background: linear-gradient(90deg, #8b9594  0, #dfdfe1 100%);
+
+  &.activeMobileMenu {
+    overflow: hidden;
+  }
 }
 
 html, body {
@@ -53,7 +57,15 @@ h1, h2, h3, h4, h5, h6, p, form {
     height: 100%;
     margin-left: -($width_max / 2);
     content: '';
-    @include image('fon-page.png', 746px auto, 50px 265px);
+    @include image('fon-page.png', 746px auto, 50px 265px, repeat-y);
+
+    @media (max-width: $screen_lg) {
+      background-position: 18% 265px;
+    }
+
+    @media (max-width: $screen_md) {
+      display: none;
+    }
   }
 }
 
@@ -73,7 +85,7 @@ h1, h2, h3, h4, h5, h6, p, form {
   padding-left: $side;
   padding-right: $side;
 
-  @media (max-width: $screen_md) {
+  @media (max-width: $screen_lg) {
     padding-left: $side_normal;
     padding-right: $side_normal;
   }
