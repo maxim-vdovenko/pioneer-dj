@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-
 import Slick from 'react-slick';
-import '../css/slick.min.css';
-
 import Title from './Title';
 import Img1 from '../img/our-school/img-1.jpg'; 
 import Img2 from '../img/our-school/img-2.jpg'; 
@@ -36,7 +33,7 @@ export default class OurSchool extends Component {
       pauseOnFocus: false,
       centerMode: true,
       variableWidth: true,
-      slidesToShow: 3,
+      slidesToShow: 1,
       slidesToScroll: 1,
       beforeChange: next => this.setState({ 
         activeSlide: next
@@ -47,8 +44,7 @@ export default class OurSchool extends Component {
           settings: {
             draggable: true,
             pauseOnHover: true,
-            pauseOnFocus: true,
-            slidesToShow: 2,
+            pauseOnFocus: true
           }
         }
       ]
