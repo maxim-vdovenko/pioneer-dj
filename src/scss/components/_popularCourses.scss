@@ -1,4 +1,5 @@
 .popularCourses {
+  $courses: &;
   @include block();
 
   &__cont {
@@ -134,6 +135,48 @@
       letter-spacing: 0.01em;
       color: $color_text_dark;
       text-decoration: none;
+
+      &--dark {
+        @include image('chevron-right-dark.svg', 12px 15px, left);
+      }
+    }
+  }
+
+  &--column {
+    #{$courses}__cont {
+      @media (max-width: $screen_lg) {
+        display: block;
+        overflow: hidden;
+      }
+    }
+
+    #{$courses}__item {
+      @media (max-width: $screen_lg) {
+        display: block;
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 60px;
+        }
+      }
+
+      @media (max-width: $screen_md) {
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    #{$courses}__box {
+      @media (max-width: $screen_md) {
+        min-height: auto;
+      }
+
+      &-list {
+        @media (max-width: $screen_md) {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 }

@@ -4,7 +4,7 @@ import Title from './Title';
 export default class PopularCourses extends Component {
   render() {
     return (
-      <div className="popularCourses">
+      <div className="popularCourses popularCourses--column">
 
         <Title
           value={[
@@ -33,7 +33,7 @@ export default class PopularCourses extends Component {
                 </ul>
                 <div className="popularCourses__box-foot">
                   <a className="popularCourses__box-more" href="#">Подробнее</a>
-                  <a className="popularCourses__box-video" href="#">Видео о курсе</a>
+                  <a className="popularCourses__box-video popularCourses__box-video--dark" href="#">Видео о курсе</a>
                 </div>
               </div>
             </div>
