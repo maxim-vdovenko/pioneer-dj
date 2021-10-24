@@ -6,7 +6,7 @@ export default class Title extends Component {
     const classDark = 'title__value-dark'
     const classRed = 'title__value-red'
     const valueMap = props.value.map((item, index) => 
-      <h2 className={item[0] === 'dark' ? classDark : classRed} key={index}>{item[1]}</h2>
+      <span className={item[0] === 'dark' ? classDark : classRed} key={index}>{item[1]}</span>
     )
 
     return (
@@ -16,7 +16,9 @@ export default class Title extends Component {
 
             {props.value &&
               <div className="title__value">
-                {valueMap}
+                <h2>
+                  {valueMap}
+                </h2>
               </div>
             }
 
