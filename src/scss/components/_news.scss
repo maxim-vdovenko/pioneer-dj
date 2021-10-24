@@ -20,7 +20,7 @@
       width: 25%;
       padding: 12px;
 
-      @media (max-width: $screen_md) {
+      @media (max-width: $screen_lgg) {
         width: 33.33%;
 
         &:nth-child(4n + 0) {

@@ -10,7 +10,7 @@
     border-radius: 12px;
 
     @media (max-width: $screen_lg) {
-      @include image('trial-lesson/mobile-1.png', 100% auto, left 0 top 0);
+      @include image('trial-lesson/mobile-1.png', 100% auto, left 0 top -30px);
       padding: 185px 40px 50px 40px;
     }
 
@@ -20,7 +20,7 @@
     }
 
     @media (max-width: $screen_sm) {
-      @include image('trial-lesson/mobile-2.png', 100% auto, left 0 top 0);
+      @include image('trial-lesson/mobile-2.png', 100% auto, left 0 top -40px);
     }
 
     &:before, &:after {
