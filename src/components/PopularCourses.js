@@ -4,7 +4,7 @@ import Title from './Title';
 export default class PopularCourses extends Component {
   render() {
     return (
-      <div className="popularCourses popularCourses--column">
+      <div className="popularCourses popularCourses--column_">
 
         <Title
           value={[

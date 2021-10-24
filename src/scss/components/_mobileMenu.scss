@@ -28,7 +28,7 @@
     width: 170px;
     height: 20px;
     top: 30px;
-    left: 15px;
+    left: $side_normal;
   }
 
   &__cont {
@@ -43,7 +43,7 @@
   &__menu {
     $menu: &;
     @include block();
-    margin: 0 15px;
+    margin: 0 $side_normal;
 
     &-discount {
       @include flex();

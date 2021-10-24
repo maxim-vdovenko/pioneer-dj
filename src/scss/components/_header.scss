@@ -334,9 +334,11 @@
     left: 0;
     bottom: -105px;
     overflow-y: auto;
+    padding: 0 12px;
 
     @media (max-width: $screen_md) {
       bottom: -81px;
+      padding: 0 16px;
     }
 
     &-cont {
@@ -420,7 +422,7 @@
     position: absolute;
     display: none;
     top: 26px;
-    right: 5px;
+    right: -7px;
     width: 30px;
     cursor: pointer;
     z-index: 1001;

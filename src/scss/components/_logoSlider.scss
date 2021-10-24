@@ -6,10 +6,11 @@
     @include flex();
     margin-top: 56px;
     overflow-x: auto;
+    padding: 0 ($side_normal / 2);
 
     @media (max-width: $screen_md) {
       margin-top: 38px;
-      padding: 0 7px;
+      padding: 0 ($side_normal - 8px);
     }
   }
 

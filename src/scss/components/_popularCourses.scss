@@ -8,6 +8,8 @@
 
     @media (max-width: $screen_lg) {
       overflow: auto;
+      margin: 62px -$side_normal 0 -$side_normal;
+      padding: 0 ($side_normal / 2);
     }
 
     @media (max-width: $screen_md) {
