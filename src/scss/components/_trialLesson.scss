@@ -15,12 +15,17 @@
     }
 
     @media (max-width: $screen_md) {
+      background-position: left 0 top -40px !important;
       min-height: auto;
       padding: 120px 30px 40px 30px;
     }
 
     @media (max-width: $screen_sm) {
-      @include image('trial-lesson/mobile-2.png', 100% auto, left 0 top -40px);
+      background-position: left 0 top -10px !important;
+    }
+
+    @media (max-width: $screen_xs) {
+      background-position: left 0 top 15px !important;
     }
 
     &:before, &:after {
