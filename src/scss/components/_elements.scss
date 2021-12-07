@@ -186,7 +186,7 @@
     height: 16px;
     left: 50%;
     top: 50%;
-    margin: -8px 0 0 -8px;
+    margin: -8px 0 0 -6px;
     content: '';
     transition: transform 0.25s;
   }
@@ -196,4 +196,8 @@
       transform: scale(1.45);
     }
   }
+}
+
+.select-full {
+  // height: 60px;
 }

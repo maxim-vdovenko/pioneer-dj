@@ -15,6 +15,23 @@ body {
 
   &.activeMobileMenu {
     overflow: hidden;
+
+    .header {
+      z-index: 1001;
+    }
+  }
+
+  &.visibleMobileMenu {
+    .header {
+      &__logo {
+        &:before {
+          opacity: 0;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 

@@ -1,0 +1,179 @@
+.сountCombo {
+  @include block();
+  margin: 135px 0 205px 0;
+
+  &__cont {
+    @include block();
+    @include image('help-choosing/fon-1.png', auto 100%, left 45px top 0);
+    justify-content: space-between;
+    padding: 64px 90px 80px 312px;
+    background-color: #1C1C1C;
+    border-radius: 12px;
+
+    @media (max-width: $screen_lg) {
+      @include image('help-choosing/mobile-1.png', auto 100%, left 10px top 0);
+      display: block;
+    }
+
+    @media (max-width: $screen_md) {
+      @include image('help-choosing/mobile-2.png', 100% auto, left 0 top -70px);
+    }
+
+    @media (max-width: $screen_sm) {
+      background-position: left 0 top -30px !important;
+    }
+
+    @media (max-width: $screen_xs) {
+      background-position: left 0 top 0 !important;
+    }
+  }
+
+  &__text {
+    @include flex();
+    flex-direction: column;
+
+    > h2 {
+      margin-bottom: 6px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 56px;
+      color: $color_text_white;
+
+      @media (max-width: $screen_md) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      @media (max-width: $screen_md) {
+        margin-bottom: 14px;
+      }
+    }
+
+    > p {
+      font-size: 14px;
+      line-height: 20px;
+      color: #C6C6C6;
+
+      span {
+        font-size: inherit;
+        line-height: inherit;
+        color: $color_text_blue;
+      }
+    }
+  }
+
+  &__form {
+    @include flex();
+    flex-wrap: wrap;
+
+    &-box {
+      position: relative;
+      width: 50%;
+
+      &:nth-child(2n + 1) {
+        padding-right: 39px;
+      }
+
+      &:nth-child(2n + 0) {
+        padding-left: 39px;
+      }
+    }
+
+    .inputBox, .button {
+      width: 100%;
+    }
+
+    .inputBox {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__price {
+    @include flex();
+    align-items: flex-end;
+    margin: 7px 0 24px 0;
+
+    &-title {
+      position: relative;
+      min-width: 155px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 40px;
+      color: $color_text_white;
+    }
+
+    &-value {
+      position: relative;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      color: $color_text_blue;
+      text-transform: uppercase;
+      background: linear-gradient(0deg, #09AFE9 0%, #1FDBCB 100%, #8AA9D6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__oldprice {
+    @include flex();
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    &-title {
+      position: relative;
+      min-width: 155px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+      color: #B9B9B9;
+    }
+
+    &-value {
+      position: relative;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: #B9B9B9;
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #B9B9B9;
+        content: '';
+      }
+    }
+  }
+
+  &__saving {
+    @include flex();
+    align-items: flex-end;
+
+    &-title {
+      position: relative;
+      min-width: 155px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+      color: $color_text_white;
+    }
+
+    &-value {
+      position: relative;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: $color_text_white;
+    }
+  }
+}

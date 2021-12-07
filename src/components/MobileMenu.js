@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import DiscountImg from '../img/news/img-2.jpg'; 
 
 export default class MobileMenu extends Component {
   render() {
-    return(
+    return (
       <div className="mobileMenu">
-        <div className="mobileMenu__logo"></div>
+
         <div className="mobileMenu__cont">
 
           <div className="mobileMenu__menu">
 
             <div className="mobileMenu__menu-discount">
-              <a className="mobileMenu__menu-discount-img" href="#"><img src={DiscountImg} alt="img" /></a>
-              <a className="mobileMenu__menu-discount-val" href="#">Акция Комбо</a>
+              <Link className="mobileMenu__menu-discount-img" to="../combo"><img src={DiscountImg} alt="img" /></Link>
+              <Link className="mobileMenu__menu-discount-val" to="../combo">Акция Комбо</Link>
             </div>
 
             <div className="mobileMenu__menu-box">
@@ -27,11 +28,11 @@ export default class MobileMenu extends Component {
                   <div className="mobileMenu__menu-butt"></div>
 
                   <ul className="mobileMenu__menu-list">
-                    <li><a href="#">Базовый курс диджеинга</a></li>
-                    <li><a href="#">PRO курс диджеинга</a></li>
-                    <li><a href="#">Базовый интенсив курс диджеинга</a></li>
-                    <li><a href="#">PRO интенсив курс диджеинга</a></li>
-                    <li><a href="#">Kids DJ курс</a></li>
+                    <li><a href="#">Базовый DJ Курс</a></li>
+                    <li><a href="#">PRO DJ Курс</a></li>
+                    <li><a href="#">Kids DJ курс</a><b>для детей</b></li>
+                    <li><a href="#">Интенсив Базовый DJ Курс</a></li>
+                    <li><a href="#">Интенсив PRO DJ Курс</a></li>
                   </ul>
                 </li>
 
@@ -42,8 +43,8 @@ export default class MobileMenu extends Component {
                   <ul className="mobileMenu__menu-list">
                     <li><a href="#">Базовый курс по написанию музыки</a></li>
                     <li><a href="#">PRO курс по написанию музыки</a></li>
-                    <li><a href="#">Базовый интенсив курс по написанию музыки</a></li>
-                    <li><a href="#">PRO интенсив курс по написанию музыки</a></li>
+                    <li><a href="#">Интенсив Базовый курс написания музыки</a></li>
+                    <li><a href="#">Интенсив PRO курс написания музыки</a></li>
                   </ul>
                 </li>
 
@@ -52,8 +53,18 @@ export default class MobileMenu extends Component {
                   <div className="mobileMenu__menu-butt"></div>
 
                   <ul className="mobileMenu__menu-list">
-                    <li><a href="#">Scratch курс от DJ Scream One</a></li>
-                    <li><a href="#">Техничный диджеинг от DJ Scream One</a></li>
+                    <li><a href="#">Scratch курс от DJ SCREAM ОNE</a></li>
+                    <li><a href="#">Техничный диджеинг курс от DJ SCREAM ОNE</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <span className="mobileMenu__menu-title">Онлайн-курсы</span>
+                  <div className="mobileMenu__menu-butt"></div>
+
+                  <ul className="mobileMenu__menu-list">
+                    <li><a href="#">Онлайн Базовый курс написания музыки</a></li>
+                    <li><a href="#">Онлайн PRO курс написания музыки</a></li>
                   </ul>
                 </li>
 
@@ -62,15 +73,31 @@ export default class MobileMenu extends Component {
             </div>
 
             <div className="mobileMenu__menu-box">
-              <a className="mobileMenu__menu-title" href="#">Услуги</a>
+              <span className="mobileMenu__menu-title">О школе</span>
+              <div className="mobileMenu__menu-butt"></div>
+
+              <ul className="mobileMenu__menu-list">
+                <li><a href="#">О школе</a></li>
+                <li><a href="#">Фото школы</a></li>
+                <li><NavLink to="/about/teachers">Преподаватели</NavLink></li>
+                <li><a href="#">Pioneer DJ Family</a></li>
+                <li><a href="#">Новости и акции</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
             </div>
 
             <div className="mobileMenu__menu-box">
-              <a className="mobileMenu__menu-title" href="#">О школе</a>
-            </div>
+              <span className="mobileMenu__menu-title">Услуги</span>
+              <div className="mobileMenu__menu-butt"></div>
 
-            <div className="mobileMenu__menu-box">
-              <a className="mobileMenu__menu-title" href="#">Контакты</a>
+              <ul className="mobileMenu__menu-list">
+                <li><a href="#">Подарочный сертификат</a></li>
+                <li><a href="#">Тренинг</a></li>
+                <li><a href="#">Промо-видео</a></li>
+                <li><a href="#">Партнерская программа</a></li>
+                <li><a href="#">Фотосессия</a></li>
+              </ul>
             </div>
 
           </div>

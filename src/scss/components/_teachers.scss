@@ -1,6 +1,6 @@
 .teachers {
   @include block();
-  margin-top: 165px;
+  margin-top: 140px;
 
   &__cont {
     @include flex();

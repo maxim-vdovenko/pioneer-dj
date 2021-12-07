@@ -1,0 +1,94 @@
+.sliderBoxs {
+  @include block();
+  margin-top: -76px;
+
+  @media (max-width: $screen_md) {
+    margin-top: -50px;
+  }
+
+  &__block {
+    @include flex();
+    padding: 0 12px;
+    overflow-x: auto;
+
+    @media (max-width: $screen_md) {
+      padding: 0 16px;
+    }
+  }
+
+  &__cont {
+    @include inline_block();
+    margin: 0 12px;
+
+    @media (max-width: $screen_md) {
+      margin: 0 8px;
+    }
+
+    &-unit {
+      @include flex();
+      align-items: flex-end;
+      width: 312px;
+      height: 164px;
+      padding: 29px;
+      background: rgba(174, 174, 174, 0.3);
+      border: 1px solid rgba(238, 238, 238, 0.2);
+      box-sizing: border-box;
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: $color_text_dark;
+      text-decoration: none;
+      box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.2);
+  
+      @media (max-width: $screen_lg) {
+        width: 264px;
+      }
+  
+      @media (max-width: $screen_md) {
+        width: 220px;
+        height: 134px;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 20px 25px 20px 20px;
+      }
+  
+      &:before, &:after {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 30px;
+        left: 30px;
+        content: '';
+        transition: opacity 0.25s ease-in-out;
+  
+        @media (max-width: $screen_md) {
+          top: 21px;
+          left: 22px;
+        }
+      }
+  
+      &:before {
+        @include image('headphones.svg', contain, center);
+        opacity: 1;
+      }
+  
+      &:after {
+        @include image('headphones-active.svg', contain, center);
+        opacity: 0;
+      }
+  
+      &:hover {
+        &:before {
+          opacity: 0;
+        }
+  
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

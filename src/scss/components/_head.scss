@@ -1,0 +1,163 @@
+.head {
+  $head: &;
+  @include block();
+
+  &__fon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color_dark;
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--empty {
+      &:before, &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+      }
+  
+      &:before {
+        @include image('head/fon-1.svg', auto 100%, right 420px top 0);
+
+        @media (max-width: $screen_lg) {
+          background-position: right 85px top 0;
+        }
+
+        @media (max-width: $screen_md) {
+          background-position: bottom;
+          background-size: auto 310px;
+        }
+      }
+  
+      &:after {
+        @include image('head/fon-2.svg', auto 100%, right 148px top 0);
+
+        @media (max-width: $screen_lg) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__cont {
+    @include block();
+    min-height: 588px;
+
+    @media (max-width: $screen_md) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include block();
+    margin-bottom: 50px;
+    padding-top: 150px;
+
+    @media (max-width: $screen_md) {
+      margin-bottom: 42px;
+      padding-top: 110px;
+    }
+
+    > h1, > h2 {
+      margin-bottom: 25px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 88px;
+      color: $color_text_white;
+
+      @media (max-width: $screen_md) {
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+      }
+    }
+
+    > p {
+      max-width: 525px;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: #C6C6C6;
+
+      @media (max-width: $screen_md) {
+        margin: 0 auto;
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      span {
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: $color_text_blue;
+      }
+    }
+  }
+
+  .button-play {
+    top: 250px;
+    right: 190px;
+
+    @media (max-width: $screen_xl) {
+      right: 60px;
+    }
+
+    @media (max-width: $screen_md) {
+      top: auto;
+      bottom: 125px;
+      right: auto;
+      left: 50%;
+      margin-left: -53px;
+    }
+  }
+
+  &--internal {
+    #{$head}__cont {
+      @media (max-width: $screen_md) {
+        min-height: 682px;
+      }
+    }
+
+    #{$head}__text {
+      margin-bottom: 30px;
+      padding-top: 180px;
+  
+      @media (max-width: $screen_md) {
+        margin-bottom: 42px;
+        padding-top: 110px;
+      }
+
+      > h1, > h2 {
+        font-size: 48px;
+        line-height: 64px;
+  
+        @media (max-width: $screen_md) {
+          font-size: 32px;
+          line-height: 48px;
+        }
+      }
+    }
+
+    .button-play {
+      @media (max-width: $screen_md) {
+        bottom: 40px;
+      }
+    }
+  }
+}
