@@ -1,5 +1,136 @@
 .teachers {
   @include block();
+  padding-top: 24px;
+
+  &__cont {
+    @include flex();
+    flex-wrap: wrap;
+    margin: 55px -12px 0 -12px;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+      margin: 55px -12px 0 -12px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 50%;
+    padding: 0 12px 24px 12px;
+
+    @media (max-width: $screen_lg) {
+      width: auto;
+    }
+  }
+
+  &__box {
+    @include flex();
+    min-height: 232px;
+    border: 1px solid rgba(238, 238, 238, 0.2);
+    border-radius: 12px;
+
+    @media (max-width: $screen_xl) {
+      min-height: 220px;
+    }
+
+    @media (max-width: $screen_lg) {
+      min-height: 232px;
+    }
+
+    &-img {
+      @include block();
+      border-radius: 12px 0 0 12px;
+      min-width: 200px;
+      min-height: 100%;
+      overflow: hidden;
+
+      @media (max-width: $screen_xl) {
+        min-width: 160px;
+      }
+
+      @media (max-width: $screen_lg) {
+        min-width: 200px;
+      }
+
+      a {
+        @include block();
+        min-height: 100%;
+        text-decoration: none;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-cont {
+      @include flex();
+      flex: 1;
+      flex-direction: column;
+      padding: 32px 30px;
+      background: rgba(174, 174, 174, 0.3);
+      backdrop-filter: blur(3px);
+      border-radius: 0 12px 12px 0;
+
+      @media (max-width: $screen_xl) {
+        padding: 18px 22px;
+      }
+
+      @media (max-width: $screen_lg) {
+        padding: 32px 30px;
+      }
+
+      h2 {
+        @include block();
+        margin-bottom: 21px;
+        font-family: 'ZonaPro', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $color_text_dark;
+      }
+
+      h3 {
+        @include block();
+        margin-bottom: 9px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: $color_text_dark;
+      }
+
+      p {
+        @include block();
+        font-size: 14px;
+        line-height: 20px;
+        color: #1F1F1F;
+      }
+    }
+
+    &-more {
+      @include inline_block();
+      max-width: 0;
+      margin: auto 0 0 0;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: $color_text_dark;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.teachersMain {
+  @include block();
   margin-top: 140px;
 
   &__cont {
@@ -91,6 +222,104 @@
       line-height: 16px;
       color: $color_text_dark;
       text-decoration: none;
+    }
+  }
+}
+
+.teachersDetail {
+  @include block();
+
+  &__block {
+    @include flex();
+    margin-top: 50px;
+    border-radius: 12px;
+    min-height: 550px;
+    overflow: hidden;
+
+    &-img {
+      position: relative;
+      width: 50%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-cont {
+      position: relative;
+      width: 50%;
+      background: linear-gradient(104.22deg, #DDDADD 2.77%, #C1CAC9 96.39%);
+      padding: 40px 0 36px 100px;
+    }
+
+    &-text {
+      @include block();
+      margin-bottom: 30px;
+
+      h1 {
+        margin-bottom: 30px;
+        font-family: 'ZonaPro', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 56px;
+        color: $color_text_dark;
+      }
+
+      h2 {
+        margin-bottom: 24px;
+        font-family: 'ZonaPro', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $color_text_dark;
+      }
+
+      p {
+        margin-top: 24px;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        color: $color_text_dark;
+      }
+
+      ul {
+        @include block();
+        margin-top: 20px;
+
+        li {
+          @include block();
+          padding-left: 20px;
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: 0.02em;
+          color: $color_text_dark;
+
+          &:before {
+            position: absolute;
+            top: 13px;
+            left: 6px;
+            width: 4px;
+            height: 4px;
+            border-radius: 1000px;
+            background-color: $color_text_dark;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  &__slider {
+    @include block();
+    @include b();
+
+    .sliderImages {
+      margin: 0;
     }
   }
 }

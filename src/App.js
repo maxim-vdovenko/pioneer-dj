@@ -7,7 +7,15 @@ import Footer from './components/Footer';
 
 import Main from './pages/Main';
 import Combo from './pages/Combo';
+
 import Teachers from './pages/Teachers';
+import TeachersDetail from './pages/TeachersDetail';
+
+import News from './pages/News';
+import NewsDetail from './pages/NewsDetail';
+
+import Contacts from './pages/Contacts';
+
 import Error from './pages/Error';
 
 class App extends Component {
@@ -18,9 +26,17 @@ class App extends Component {
           <Router>
 
             <Routes>
-              <Route exact path="/" element={<Main />} />
+              <Route path="/" element={<Main />} />
               <Route path="/combo" element={<Combo />} />
-              <Route path="/about/teachers" element={<Teachers />} />
+
+              <Route path="/teachers" element={<Teachers />} />
+              <Route path="/teachers/detail" element={<TeachersDetail />} />
+
+              <Route path="/news" element={<News />} />
+              <Route path="/news/detail" element={<NewsDetail />} />
+
+              <Route path="/contacts" element={<Contacts />} />
+
               <Route path="*" element={<Error />} />
             </Routes>
 

@@ -23,6 +23,8 @@ body {
 
   &.visibleMobileMenu {
     .header {
+      background-color: transparent;
+      
       &__logo {
         &:before {
           opacity: 0;
@@ -105,5 +107,41 @@ h1, h2, h3, h4, h5, h6, p, form {
   @media (max-width: $screen_lg) {
     padding-left: $side_normal;
     padding-right: $side_normal;
+  }
+}
+
+.doubleBlock {
+  @include block();
+  margin-top: $height_height;
+  padding: 50px 0 200px 0;
+  
+  &__block {
+    @include flex();
+
+    @media (max-width: $screen_lg) {
+      display: block;
+    }
+  }
+
+  &__sidebar {
+    position: relative;
+    min-width: 224px;
+    padding-right: 35px;
+
+    @media (max-width: $screen_xl) {
+      min-width: 180px;
+      padding-right: 25px;
+    }
+
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
+  }
+
+  &__cont {
+    position: relative;
+    @include block();
+    width: 100%;
+    // flex: 1;
   }
 }

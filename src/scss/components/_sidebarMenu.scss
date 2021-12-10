@@ -1,0 +1,45 @@
+.sidebarMenu {
+  @include block();
+
+  &__list {
+    @include block();
+
+    li {
+      @include flex();
+      align-items: center;
+      min-height: 56px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #1F1F1F;
+      }
+
+      a {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: none;
+        color: $color_text_dark;
+
+        &:hover {
+          color: $color_text_white;
+        }
+
+        // &.active {
+        //   color: $color_text_white;
+        // }
+      }
+    }
+  }
+
+  &__link {
+    @include block();
+    margin-top: 40px;
+
+    .button-empty {
+      width: 100%;
+      padding: 0 15px;
+      border-radius: 1000px;
+      color: $color_text_dark;
+    }
+  }
+}

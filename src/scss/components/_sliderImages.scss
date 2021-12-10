@@ -1,10 +1,15 @@
-.ourSchool {
+.sliderImages {
   @include block();
   margin-top: 164px;
+  margin-bottom: 208px;
+
+  @media (max-width: $screen_md) {
+    margin-bottom: 160px;
+  }
   
   &__description {
     @include block();
-    margin-top: 30px;
+    margin: 30px 0 62px 0;
 
     > p {
       font-size: 18px;
@@ -19,7 +24,7 @@
     }
   }
 
-  &__sliderCont {
+  &__cont {
     @include block();
 
     &-counter {
@@ -27,9 +32,8 @@
       display: flex;
       justify-content: center;
       width: 60px;
-      left: 50%;
+      left: 15px;
       bottom: -41px;
-      margin-left: -30px;
 
       @media (max-width: $screen_md) {
         left: auto;
@@ -46,12 +50,16 @@
         line-height: 16px;
         color: $color_text_dark;
       }
+
+      &--center {
+        left: 50%;
+        margin-left: -30px;
+      }
     }
   }
 
-  &__slider {
+  &__slick {
     @include block();
-    margin-top: 62px;
     box-sizing: border-box;
     -webkit-user-select: none;
     user-select: none;
@@ -83,6 +91,11 @@
           height: 176px;
         }
       }
+    }
+
+    &-wrapper {
+      @include block();
+      cursor: pointer;
     }
 
     .slick-list {
@@ -126,7 +139,6 @@
       position: absolute;
       width: 30px;
       height: 30px;
-      left: 50%;
       bottom: -47px;
       overflow: hidden;
       color: transparent;
@@ -142,22 +154,40 @@
     }
 
     .slick-prev {
-      margin-left: -47px;
+      left: 0;
       transform: rotate(180deg);
 
       @media (max-width: $screen_md) {
         margin-left: 0;
+        left: auto;
         right: 57px;
       }
     } 
 
     .slick-next {
-      margin-left: 17px;
+      left: 60px;
 
       @media (max-width: $screen_md) {
         margin-left: 0;
+        left: auto;
         right: 0;
       }
-    } 
+    }
+
+    &--center {
+      @include b();
+
+      .slick-arrow {
+        left: 50%;
+      }
+
+      .slick-prev {
+        margin-left: -47px;
+      }
+
+      .slick-next {
+        margin-left: 17px;
+      }
+    }
   }
 }

@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 import InputMask from 'react-input-mask';
-import Select from 'react-select'
+import SelectFull from './SelectFull';
 
 export default class CountCombo extends Component {
   render() {
-
-    const options = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' }
-    ]
-
-    const customStyles = {
-      control: () => ({
-        height: 60
-      }),
-    }
-
     return (
       <div className="сountCombo">
         <div className="container">
@@ -30,24 +17,12 @@ export default class CountCombo extends Component {
             <div className="сountCombo__form">
 
               <div className="сountCombo__form-box">
-
-                <div className="">
-                  {/* <Select className="select-full" options={options} /> */}
-                  <Select
-                    className="select-full"
-                    styles={customStyles}
-                    options={options}
-                  />
-                </div>
-
+                <SelectFull />
+                <div className="сountCombo__form-plus"></div>
               </div>
 
               <div className="сountCombo__form-box">
-                
-                <div className="">
-
-                </div>
-
+                <SelectFull />
               </div>
 
               <div className="сountCombo__form-box">

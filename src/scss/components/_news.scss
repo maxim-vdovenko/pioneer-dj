@@ -1,12 +1,9 @@
 .news {
+  $news: &;
   @include block();
-  margin-top: 208px;
-
-  @media (max-width: $screen_md) {
-    margin-top: 160px;
-  }
 
   &__cont {
+    $cont: &;
     @include flex();
     flex-wrap: wrap;
     margin: 50px -12px 0 -12px;
@@ -22,10 +19,6 @@
 
       @media (max-width: $screen_lgg) {
         width: 33.33%;
-
-        &:nth-child(4n + 0) {
-          display: none;
-        }
       }
 
       @media (max-width: $screen_sm) {
@@ -41,6 +34,30 @@
         @include block();
         width: 100%;
         border-radius: 12px;
+      }
+    }
+
+    &--three {
+      #{$cont}-box {
+        width: 33.33%;
+
+        @media (max-width: $screen_sm) {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .titleShowMore {
+    margin-top: 20px;
+  }
+
+  &--main {
+    #{$news}__cont-box {
+      @media (max-width: $screen_lgg) {
+        &:nth-child(4n + 0) {
+          display: none;
+        }
       }
     }
   }

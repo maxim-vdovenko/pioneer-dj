@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 export default class Title extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class Title extends Component {
             }
 
             {props.valueLink !== undefined && 
-              <a className="title__link" href={props.link}>{props.valueLink}</a>
+              <Link className="title__link" to={props.link}>{props.valueLink}</Link>
             }
 
           </div>

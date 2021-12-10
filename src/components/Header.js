@@ -6,6 +6,7 @@ import DiscountImg from '../img/news/img-2.jpg';
 export default class Header extends Component {
 
   componentDidMount = () => {
+    window.scrollTo(0, 0)
     const body = document.querySelector('body')
     const header = document.querySelector('.header')
     const head = document.querySelector('.head')
@@ -14,25 +15,26 @@ export default class Header extends Component {
       body.classList.remove('activeMobileMenu')
       body.classList.remove('visibleMobileMenu')
     }
-    
+
     this.openMenu()
     this.switchingMenu()
 
     if (!head) {
-      setTimeout(() => {
-        header.classList.add('active')
-      }, 1)
+      header.classList.add('active')
     } else {
       this.headerAddClass()
       window.addEventListener('scroll', () => {
         this.headerAddClass()
       })
-    }  
+    } 
   }
 
   headerAddClass = () => {
     const header = document.querySelector('.header')
-  
+    const head = document.querySelector('.head')
+
+    if (!head) return
+
     if (window.scrollY > 5) {
       header.classList.add('active')
     } else {
@@ -197,13 +199,13 @@ export default class Header extends Component {
                               <ul>
                                 <li><a href="#">О школе</a></li>
                                 <li><a href="#">Фото школы</a></li>
-                                <li><NavLink to="/about/teachers">Преподаватели</NavLink></li>
+                                <li><Link to="/teachers">Преподаватели</Link></li>
                                 <li><a href="#">Pioneer DJ Family</a></li>
                               </ul>
                               <ul>
-                                <li><a href="#">Новости и акции</a></li>
+                                <li><Link to="/news">Новости и акции</Link></li>
                                 <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">Контакты</a></li>
+                                <li><Link to="/contacts">Контакты</Link></li>
                               </ul>
                             </div>
                           </div>
@@ -269,8 +271,8 @@ export default class Header extends Component {
 function Combo() {
   return (
     <>
-      <Link className="header__submenu-name" to="../combo">Акция Комбо</Link>
-      <Link className="header__submenu-discount" to="../combo"><img src={DiscountImg} alt="img" /></Link>
+      <Link className="header__submenu-name" to="/combo">Акция Комбо</Link>
+      <Link className="header__submenu-discount" to="/combo"><img src={DiscountImg} alt="img" /></Link>
     </>
   )
 }

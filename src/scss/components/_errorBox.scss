@@ -1,0 +1,45 @@
+.errorBox {
+  @include block();
+  margin-top: $height_height;
+  padding: 100px 0 200px 0;
+
+  @media (max-width: $screen_md) {
+    padding: 80px 0 100px 0;
+  }
+
+  > h1 {
+    @include block(center);
+    font-size: 50px;
+    line-height: 65px;
+    color: $color_text_dark;
+
+    @media (max-width: $screen_md) {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+
+  &__link {
+    @include block(center);
+    margin-top: 60px;
+
+    @media (max-width: $screen_md) {
+      margin-top: 30px;
+    }
+
+    a {
+      font-size: 18px;
+      line-height: 30px;
+      color: $color_text_dark;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @media (max-width: $screen_md) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

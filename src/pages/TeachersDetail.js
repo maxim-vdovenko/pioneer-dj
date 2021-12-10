@@ -4,10 +4,10 @@ import MobileMenu from '../components/MobileMenu';
 import Header from '../components/Header';
 
 import SidebarMenu from '../components/SidebarMenu';
-import TeachersComp from '../components/TeachersComp';
+import TeachersDetailComp from '../components/TeachersDetailComp';
 import HelpChoosing from '../components/HelpChoosing';
 
-export default class Teachers extends Component {
+export default class TeachersDetail extends Component {
   render() {
     return (
       <>
@@ -25,7 +25,7 @@ export default class Teachers extends Component {
               </div>
 
               <div className="doubleBlock__cont">
-                <TeachersComp />
+                <TeachersDetailComp />
                 <HelpChoosing />
               </div>
               
