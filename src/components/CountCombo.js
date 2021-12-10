@@ -1,9 +1,40 @@
 import React, { Component } from 'react';
+
 import InputMask from 'react-input-mask';
 import SelectFull from './SelectFull';
+import SelectImg from '../img/сount-combo/img-1.png'; 
 
 export default class CountCombo extends Component {
   render() {
+
+    const SelectData = [
+      {
+        img: SelectImg,
+        name: 'Базовый Курс Написания Музыки',
+        price: '49 900 ₽'
+      },
+      {
+        img: SelectImg,
+        name: 'Курс Написания Музыки',
+        price: '36 300 ₽'
+      },
+      {
+        img: SelectImg,
+        name: 'Pro Курс Написания Музыки',
+        price: '65 000 ₽'
+      },
+      {
+        img: SelectImg,
+        name: 'Курс Музыки',
+        price: '18 000 ₽'
+      },
+      {
+        img: SelectImg,
+        name: 'Базовый Курс',
+        price: '9 999 ₽'
+      }
+    ]
+    
     return (
       <div className="сountCombo">
         <div className="container">
@@ -17,12 +48,12 @@ export default class CountCombo extends Component {
             <div className="сountCombo__form">
 
               <div className="сountCombo__form-box">
-                <SelectFull />
+                <SelectFull data={SelectData} />
                 <div className="сountCombo__form-plus"></div>
               </div>
 
               <div className="сountCombo__form-box">
-                <SelectFull />
+                <SelectFull data={SelectData} />
               </div>
 
               <div className="сountCombo__form-box">

@@ -40,6 +40,7 @@ export default class SliderImages extends Component {
         }
       ]
     }
+    
     return (
       <div className="sliderImages__cont">
 

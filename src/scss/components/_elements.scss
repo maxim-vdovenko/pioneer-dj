@@ -241,6 +241,7 @@
   $select: &;
   @include block();
   z-index: 1;
+  user-select: none;
 
   &__title {
     @include block();
@@ -302,7 +303,6 @@
 
   &__list {
     position: absolute;
-    display: none;
     left: 0;
     top: 64px;
     width: 100%;
@@ -359,10 +359,15 @@
   }
 
   &.active {
+    z-index: 101;
+
     #{$select}__title {
       &:after {
         transform: rotate(180deg);
       }
+    }
+    #{$select}__list {
+      display: block;
     }
   }
 }
