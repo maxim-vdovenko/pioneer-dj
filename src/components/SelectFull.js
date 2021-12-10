@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
 
 export default class SelectFull extends Component {
-  state = {
-    active: false,
-    index: 0
+  constructor(props) {
+    super(props)
+    this.state = {
+      active: false,
+      index: 0
+    }
+    this.ref = React.createRef()
   }
 
   componentDidMount = () => {
@@ -24,8 +27,7 @@ export default class SelectFull extends Component {
   }
 
   closeSelect = (e) => {
-    const domNode = ReactDOM.findDOMNode(this)
-    if ((!domNode || !domNode.contains(e.target))) {
+    if (!this.ref.current.contains(e.target)) {
       this.setState({active: false}) 
     }
   }
@@ -58,7 +60,7 @@ export default class SelectFull extends Component {
     return (
       <>
         {data.length &&
-          <div className={`${this.state.active ? 'select-full active' : 'select-full'}`}>
+          <div className={`${this.state.active ? 'select-full active' : 'select-full'}`} ref={this.ref}>
 
             <div className="select-full__title" onClick={() => this.openSelect()}>
               {this.contSelect(data[this.state.index])}
