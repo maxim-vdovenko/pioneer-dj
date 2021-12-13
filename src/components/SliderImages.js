@@ -77,7 +77,7 @@ export default class SliderImages extends Component {
               valueLink={title.valueLink}
               link={title.link}
             />
-
+            
             <div className="container">
               {description &&
                 <div className="sliderImages__description">

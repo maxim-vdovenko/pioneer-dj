@@ -26,7 +26,7 @@ export default class Contacts extends Component {
 
               <div className="doubleBlock__cont">
                 <ContactsComp />
-                <HelpChoosing />
+                <HelpChoosing inside={true} />
               </div>
               
             </div>

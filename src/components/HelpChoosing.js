@@ -3,8 +3,9 @@ import InputMask from 'react-input-mask';
 
 export default class HelpChoosing extends Component {
   render() {
+    const inside = this.props.inside
     return (
-      <div className="helpChoosing">
+      <div className={`${inside ? 'helpChoosing helpChoosing--inside' : 'helpChoosing'}`}>
         <div className="container">
           <div className="helpChoosing__cont">
 

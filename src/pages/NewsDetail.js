@@ -57,7 +57,7 @@ export default class NewsDetail extends Component {
               <div className="doubleBlock__cont">
                 <NewsDetailComp />
                 <NewsComp data={newsData} />
-                <HelpChoosing />
+                <HelpChoosing inside={true} />
               </div>
               
             </div>

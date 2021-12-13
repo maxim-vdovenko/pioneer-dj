@@ -1,22 +1,27 @@
 .helpChoosing {
+  $block: &;
   @include block();
   margin-top: 148px;
 
+  @media (max-width: $screen_md) {
+    margin-top: 135px;
+  }
+
   &__cont {
     @include flex();
-    @include image('help-choosing/fon-1.png', auto 100%, left 45px top 0);
+    @include image('help-choosing/fon-1.svg', auto 100%, left 55px top 0);
     justify-content: space-between;
     min-height: 322px;
     background-color: #1C1C1C;
     border-radius: 12px;
 
     @media (max-width: $screen_lg) {
-      @include image('help-choosing/mobile-1.png', auto 100%, left 10px top 0);
+      @include image('help-choosing/mobile-1.svg', auto 100%, left 10px top 0);
       display: block;
     }
 
     @media (max-width: $screen_md) {
-      @include image('help-choosing/mobile-2.png', 100% auto, left 0 top -70px);
+      @include image('help-choosing/mobile-2.svg', 100% auto, left 0 top -70px);
     }
 
     @media (max-width: $screen_sm) {
@@ -104,6 +109,64 @@
 
     .inputBox {
       margin-bottom: 20px;
+    }
+  }
+
+  &--inside {
+    #{$block}__cont {
+      background-position: left 5px top 0;
+  
+      @media (max-width: $screen_md) {
+        background-position: left 0 top -70px !important;
+      }
+  
+      @media (max-width: $screen_sm) {
+        background-position: left 0 top -30px !important;
+      }
+  
+      @media (max-width: $screen_xs) {
+        background-position: left 0 top 0 !important;
+      }
+    }
+
+    #{$block}__text {
+      padding: 64px 0 60px 135px;
+
+      @media (max-width: $screen_xl) {
+        padding: 64px 0 60px 120px;
+      }
+  
+      @media (max-width: $screen_lg) {
+        display: block;
+        padding: 64px 100px 0 200px;
+      }
+  
+      @media (max-width: $screen_md) {
+        padding: 123px 30px 0 30px;
+      }
+    }
+
+    #{$block}__form {
+      padding: 67px 60px;
+
+      @media (max-width: $screen_xl) {
+        padding: 67px 30px;
+      }
+  
+      @media (max-width: $screen_lg) {
+        display: block;
+        padding: 60px 60px 80px 200px;
+      }
+  
+      @media (max-width: $screen_md) {
+        padding: 30px 30px 40px 30px;
+      }
+
+      .inputBox, .button {
+        @media (max-width: $screen_xl) {
+          min-width: 200px;
+        }
+      }
     }
   }
 }

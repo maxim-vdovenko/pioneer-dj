@@ -382,7 +382,7 @@
     @include inline_block();
     @include image('arrow-slider-dark-left.svg', auto 14px, left 0 center);
     min-height: 16px;
-    padding-left: 23px;
+    padding-left: 16px;
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
@@ -398,7 +398,7 @@
 
   li {
     @include inline_block();
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     &:not(:last-child) {
       margin-right: 24px;
@@ -427,12 +427,54 @@
   backdrop-filter: blur(3px);
   border-radius: 12px;
 
+  @media (max-width: $screen_md) {
+    padding: 30px;
+  }
+
   p {
     margin-bottom: 24px;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0.02em;
     color: $color_text_dark;
+
+    @media (max-width: $screen_md) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  ul {
+    @include block();
+
+    li {
+      @include block();
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: $color_text_dark;
+
+      @media (max-width: $screen_md) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 13px;
+        left: 6px;
+        width: 4px;
+        height: 4px;
+        border-radius: 1000px;
+        background-color: $color_text_dark;
+        content: '';
+
+        @media (max-width: $screen_md) {
+          top: 10px;
+        }
+      }
+    }
   }
 
   *:last-child {

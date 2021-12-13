@@ -7,12 +7,12 @@ export default class SidebarMenu extends Component {
       <div className="sidebarMenu">
         
         <ul className="sidebarMenu__list">
-          <li><NavLink to="#">О школе</NavLink></li>
-          <li><NavLink to="#">Фото школы</NavLink></li>
+          <li><a href="#">О школе</a></li>
+          <li><a href="#">Фото школы</a></li>
           <li><NavLink to="/teachers">Преподаватели</NavLink></li>
-          <li><NavLink to="#">Pioneer DJ Family</NavLink></li>
+          <li><a href="#">Pioneer DJ Family</a></li>
           <li><NavLink to="/news">Новости и акции</NavLink></li>
-          <li><NavLink to="#">Отзывы</NavLink></li>
+          <li><a href="#">Отзывы</a></li>
           <li><NavLink to="/contacts">Контакты</NavLink></li>
         </ul>
 

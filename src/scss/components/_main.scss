@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6, p, form {
   overflow: hidden;
 
   &:before {
+    @include image('fon-page.png', 746px auto, 50px 265px, repeat-y);
     position: absolute;
     top: 0;
     left: 50%;
@@ -76,7 +77,6 @@ h1, h2, h3, h4, h5, h6, p, form {
     height: 100%;
     margin-left: -($width_max / 2);
     content: '';
-    @include image('fon-page.png', 746px auto, 50px 265px, repeat-y);
 
     @media (max-width: $screen_lg) {
       background-position: 18% 265px;
@@ -113,7 +113,11 @@ h1, h2, h3, h4, h5, h6, p, form {
 .doubleBlock {
   @include block();
   margin-top: $height_height;
-  padding: 50px 0 200px 0;
+  padding-bottom: 200px;
+
+  @media (max-width: $screen_md) {
+    padding-bottom: 164px;
+  }
   
   &__block {
     @include flex();
@@ -126,11 +130,12 @@ h1, h2, h3, h4, h5, h6, p, form {
   &__sidebar {
     position: relative;
     min-width: 224px;
-    padding-right: 35px;
+    padding-right: 60px;
+    padding-top: 50px;
 
     @media (max-width: $screen_xl) {
-      min-width: 180px;
-      padding-right: 25px;
+      min-width: 200px;
+      padding-right: 30px;
     }
 
     @media (max-width: $screen_lg) {
@@ -141,7 +146,24 @@ h1, h2, h3, h4, h5, h6, p, form {
   &__cont {
     position: relative;
     @include block();
-    width: 100%;
-    // flex: 1;
+    padding-top: 74px;
+    flex: 1;
+
+    @media (max-width: $screen_lg) {
+      padding-top: 64px;
+    }
+
+    @media (max-width: $screen_md) {
+      padding-top: 62px;
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .link-back {
+      margin-left: 8px;
+    }
   }
 }

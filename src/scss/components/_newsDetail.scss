@@ -8,15 +8,24 @@
     margin-top: 32px;
     background: linear-gradient(104.22deg, #DDDADD 2.77%, #C1CAC9 96.39%);
     border-radius: 12px;
-    padding: 30px 30px 40px 30px;
+    padding: 35px 30px 40px 30px;
+
+    @media (max-width: $screen_md) {
+      padding: 30px 30px 40px 30px;
+    }
 
     h1 {
-      margin-bottom: 40px;
+      margin-bottom: 36px;
       font-family: 'ZonaPro', sans-serif;
       font-weight: 700;
       font-size: 40px;
       line-height: 56px;
       color: $color_text_dark;
+
+      @media (max-width: $screen_md) {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
 
     h3 {
@@ -26,6 +35,11 @@
       font-size: 24px;
       line-height: 30px;
       color: $color_text_dark;
+
+      @media (max-width: $screen_md) {
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
 
     p {
@@ -34,6 +48,11 @@
       line-height: 30px;
       letter-spacing: 0.02em;
       color: $color_text_dark;
+
+      @media (max-width: $screen_md) {
+        font-size: 16px;
+        line-height: 24px;
+      }
 
       a {
         font-size: inherit;

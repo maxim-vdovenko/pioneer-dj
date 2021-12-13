@@ -5,23 +5,53 @@
   &__block {
     @include flex();
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin: 30px -12px 0 -12px;
+
+    @media (max-width: $screen_md) {
+      margin-top: 50px;
+    }
   }
 
   &__cont {
     @include flex();
     width: 100%;
 
+    @media (max-width: $screen_lg) {
+      flex-wrap: wrap;
+      width: 50%;
+    }
+
+    @media (max-width: $screen_md) {
+      width: 100%;
+    }
+
     #{$contacts}__box {
       width: 33.33%;
+
+      @media (max-width: $screen_lg) {
+        width: 100%;
+      }
     }
 
     &--column {
       width: 33.33%;
       flex-direction: column;
 
+      @media (max-width: $screen_lg) {
+        width: 50%;
+      }
+
+      @media (max-width: $screen_md) {
+        width: 100%;
+      }
+
       #{$contacts}__box {
         width: auto;
+        padding-bottom: 0;
+
+        @media (max-width: $screen_md) {
+          padding-bottom: 12px;
+        }
       }
     }
   }
@@ -34,6 +64,10 @@
     margin: 0 12px 24px 12px;
     padding: 32px 30px 10px 30px;
     
+    @media (max-width: $screen_md) {
+      padding: 22px 20px 12px 20px;
+    }
+
     &:before {
       @include block();
       margin-bottom: 25px;
@@ -50,31 +84,50 @@
         font-size: 18px;
         line-height: 22px;
         color: $color_text_dark;
+
+        @media (max-width: $screen_md) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
     }
 
     &--location {
       min-height: 204px;
 
+      @media (max-width: $screen_md) {
+        min-height: auto;
+      }
+
       &:before {
         @include image('location-right.svg', 16px auto, center);
         width: 20px;
         height: 20px;
+        margin-bottom: 17px;
       }
     }
 
     &--clock {
       min-height: 122px;
 
+      @media (max-width: $screen_md) {
+        min-height: auto;
+      }
+
       &:before {
         @include image('clock-right.svg', 20px auto, center);
         width: 20px;
         height: 20px;
+        margin-bottom: 17px;
       }
     }
 
     &--email {
       min-height: 130px;
+
+      @media (max-width: $screen_md) {
+        min-height: auto;
+      }
 
       &:before {
         @include image('email-right.svg', 20px auto, center);
@@ -86,6 +139,10 @@
     &--phone {
       min-height: 130px;
 
+      @media (max-width: $screen_md) {
+        min-height: auto;
+      }
+
       &:before {
         @include image('phone-right.svg', 20px auto, center);
         width: 20px;
@@ -96,6 +153,10 @@
     &--networks {
       min-height: 130px;
 
+      @media (max-width: $screen_md) {
+        min-height: auto;
+      }
+
       &:before {
         display: none;
       }
@@ -104,13 +165,24 @@
 
   &__item {
     $item: &;
-    @include block();
+    @include flex();
     width: 33.33%;
+    height: 100%;
     margin-bottom: 24px;
     padding: 0 12px;
 
+    @media (max-width: $screen_lg) {
+      width: 50%;
+    }
+
+    @media (max-width: $screen_md) {
+      width: 100%;
+    }
+
     &-bl {
       @include block();
+      width: 100%;
+      height: 100%;
       background-color: #DDDADD;
       box-shadow: 0px 0px 20px #AEB7B6;
       border-radius: 12px;
@@ -131,6 +203,7 @@
         left: 0;
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
 
       &:after {
@@ -152,6 +225,11 @@
       font-size: 18px;
       line-height: 22px;
       color: $color_text_white;
+
+      @media (max-width: $screen_md) {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
 
     .button-play {
@@ -164,12 +242,20 @@
     &--info {
       #{$item}-bl {
         min-height: 349px;
+
+        @media (max-width: $screen_lg) {
+          min-height: 350px;
+        }
       }
     }
 
     &--map {
       #{$item}-bl {
         min-height: 349px;
+
+        @media (max-width: $screen_lg) {
+          min-height: 438px;
+        }
       }
     }
   }

@@ -9,7 +9,7 @@
     margin: 50px -12px 0 -12px;
 
     @media (max-width: $screen_md) {
-      margin-top: 27px;
+      margin: 27px -8px 0 -8px;
     }
 
     &-box {
@@ -19,6 +19,10 @@
 
       @media (max-width: $screen_lgg) {
         width: 33.33%;
+      }
+
+      @media (max-width: $screen_md) {
+        padding: 8px;
       }
 
       @media (max-width: $screen_sm) {
@@ -49,7 +53,7 @@
   }
 
   .titleShowMore {
-    margin-top: 20px;
+    margin-top: 16px;
   }
 
   &--main {

@@ -26,7 +26,7 @@ export default class Teachers extends Component {
 
               <div className="doubleBlock__cont">
                 <TeachersComp />
-                <HelpChoosing />
+                <HelpChoosing inside={true} />
               </div>
               
             </div>

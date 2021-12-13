@@ -15,6 +15,7 @@ import NewsImg5 from '../img/news/img-5.jpg';
 import NewsImg6 from '../img/news/img-6.jpg'; 
 import NewsImg7 from '../img/news/img-7.jpg'; 
 import NewsImg8 from '../img/news/img-8.jpg'; 
+import NewsImg9 from '../img/news/img-9.jpg'; 
 
 export default class News extends Component {
   render() {
@@ -29,6 +30,7 @@ export default class News extends Component {
       more: {
         text: ['Показать еще', 'новостей']
       },
+      column: 'three',
       mobile: true,
       box: [
         {
@@ -62,6 +64,10 @@ export default class News extends Component {
         {
           link: '/news/detail',
           srcImg: NewsImg8
+        },
+        {
+          link: '/news/detail',
+          srcImg: NewsImg9
         }
       ]
     }
@@ -83,7 +89,7 @@ export default class News extends Component {
 
               <div className="doubleBlock__cont">
                 <NewsComp data={newsData} />
-                <HelpChoosing />
+                <HelpChoosing inside={true} />
               </div>
               
             </div>
