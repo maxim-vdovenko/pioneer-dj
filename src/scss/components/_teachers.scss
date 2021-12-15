@@ -184,6 +184,7 @@
 
     @media (max-width: $screen_md) {
       margin-top: 38px;
+      padding: 0 16px;
     }
   }
 
@@ -198,7 +199,8 @@
     }
 
     @media (max-width: $screen_md) {
-      min-width: 280px;
+      min-width: 305px;
+      padding: 0 8px;
     }
   }
 
@@ -211,7 +213,19 @@
       height: 264px;
       overflow: hidden;
 
-      > img {
+      @media (max-width: $screen_md) {
+        height: 237px;
+      }
+
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
         position: absolute;
         top: 0;
         left: 0;
@@ -224,27 +238,58 @@
     &-cont {
       @include flex();
       flex-direction: column;
-      padding: 30px;
+      min-height: 266px;
+      padding: 30px 30px 32px 30px;
       background: rgba(174, 174, 174, 0.3);
       border: 1px solid rgba(238, 238, 238, 0.2);
       backdrop-filter: blur(5px);
       box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.2);
       border-radius: 0 0 12px 12px;
+
+      @media (max-width: $screen_md) {
+        min-height: 214px;
+        padding: 20px;
+      }
     }
 
     &-name {
       @include block();
-      margin-bottom: 24px;
+      margin-bottom: 21px;
       font-family: 'ZonaPro', sans-serif;
       font-weight: 700;
       font-size: 24px;
       line-height: 30px;
       color: $color_text_dark;
+
+      @media (max-width: $screen_md) {
+        margin-bottom: 13px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &-subname {
+      @include block();
+      margin-bottom: 24px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: $color_text_dark;
+
+      @media (max-width: $screen_md) {
+        margin-bottom: 17px;
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     &-text {
       @include block();
       margin-bottom: 28px;
+
+      @media (max-width: $screen_md) {
+        margin-bottom: 10px;
+      }
 
       p {
         font-size: 14px;
@@ -256,11 +301,16 @@
     &-more {
       @include inline_block();
       max-width: 0;
+      margin: auto 0 0 0;
       font-weight: 600;
       font-size: 14px;
       line-height: 16px;
       color: $color_text_dark;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -275,7 +325,7 @@
     min-height: 550px;
     overflow: hidden;
 
-    @media (max-width: $screen_md) {
+    @media (max-width: $screen_lg) {
       flex-wrap: wrap;
     }
 
@@ -283,7 +333,7 @@
       @include block();
       width: 50%;
 
-      @media (max-width: $screen_md) {
+      @media (max-width: $screen_lg) {
         width: 100%;
         order: 1;
       }
@@ -296,7 +346,7 @@
         height: 100%;
         object-fit: cover;
 
-        @media (max-width: $screen_md) {
+        @media (max-width: $screen_lg) {
           position: relative;
           top: auto;
           left: auto;
@@ -318,13 +368,13 @@
       }
 
       @media (max-width: $screen_lg) {
-        padding: 32px 40px 20px 40px;
+        width: 100%;
+        padding: 45px 40px 60px 40px;
+        order: 0;
       }
 
       @media (max-width: $screen_md) {
-        width: 100%;
-        padding: 32px 30px 40px 30px;
-        order: 0;
+        padding: 32px 30px 55px 30px;
       }
     }
 
@@ -341,6 +391,7 @@
         color: $color_text_dark;
 
         @media (max-width: $screen_md) {
+          margin-bottom: 30px;
           font-size: 24px;
           line-height: 32px;
         }
@@ -437,11 +488,16 @@
 
       @media (max-width: $screen_md) {
         @include block();
+        margin: 0 0 0 8px;
       }
 
       &__slick-box {
         @media (max-width: $screen_lg) {
           padding: 0 0 0 24px;
+        }
+
+        @media (max-width: $screen_md) {
+          padding: 0 0 0 16px;
         }
       }
     }

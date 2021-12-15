@@ -30,4 +30,12 @@
       position: relative;
     }
   }
+
+  .title__value {
+    h1, h2 {
+      span {
+        @include inline_block();
+      }
+    }
+  }
 }

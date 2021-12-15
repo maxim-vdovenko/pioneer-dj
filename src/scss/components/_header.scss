@@ -193,7 +193,6 @@
     right: 0;
     width: 820px;
     padding-top: 4px;
-    filter: drop-shadow(0px 0px 100px #1C1C1C);
 
     @media (max-width: $screen_xl) {
       width: 600px;
@@ -210,6 +209,7 @@
       padding: 42px 60px 30px 60px;
       background: linear-gradient(104.22deg, #DDDADD 2.77%, #C1CAC9 96.39%);
       border-radius: 12px;
+      box-shadow: 0 50px 100px -10px rgba($color: #1C1C1C, $alpha: 0.4);
 
       @media (max-width: $screen_xl) {
         min-height: auto;
