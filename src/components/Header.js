@@ -75,18 +75,21 @@ export default class Header extends Component {
   }
 
   switchingMenu = () => {
-    const butt = document.querySelectorAll('.mobileMenu__menu-box > .mobileMenu__menu-butt')
-    const subbutt = document.querySelectorAll('.mobileMenu__menu-list > li > .mobileMenu__menu-butt')
+    const butt = document.querySelectorAll('.mobileMenu__menu-box > .mobileMenu__menu-title')
+    const subbutt = document.querySelectorAll('.mobileMenu__menu-list > li > .mobileMenu__menu-title')
   
     butt.forEach(element => {
       element.addEventListener('click', event => {
         const th = event.target
-        if (th.classList.contains('active')) {
-          th.classList.remove('active')
-          th.nextSibling.classList.remove('active')
+        const btn = th.parentElement.querySelector('.mobileMenu__menu-butt')
+        const lst = th.parentElement.querySelector('.mobileMenu__menu-list')
+
+        if (btn.classList.contains('active')) {
+          btn.classList.remove('active')
+          lst.classList.remove('active')
         } else {
-          th.classList.add('active')
-          th.nextSibling.classList.add('active')
+          btn.classList.add('active')
+          lst.classList.add('active')
         }
       })
     })
@@ -94,12 +97,15 @@ export default class Header extends Component {
     subbutt.forEach(element => {
       element.addEventListener('click', event => {
         const th = event.target
-        if (th.classList.contains('active')) {
-          th.classList.remove('active')
-          th.nextSibling.classList.remove('active')
+        const btn = th.parentElement.querySelector('.mobileMenu__menu-butt')
+        const lst = th.parentElement.querySelector('.mobileMenu__menu-list')
+
+        if (btn.classList.contains('active')) {
+          btn.classList.remove('active')
+          lst.classList.remove('active')
         } else {
-          th.classList.add('active')
-          th.nextSibling.classList.add('active')
+          btn.classList.add('active')
+          lst.classList.add('active')
         }
       })
     })

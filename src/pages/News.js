@@ -30,7 +30,6 @@ export default class News extends Component {
       more: {
         text: ['Показать еще', 'новостей']
       },
-      column: 'three',
       mobile: true,
       box: [
         {
@@ -88,7 +87,7 @@ export default class News extends Component {
               </div>
 
               <div className="doubleBlock__cont">
-                <NewsComp data={newsData} />
+                <NewsComp data={newsData} dataClass={'comp'} />
                 <HelpChoosing inside={true} />
               </div>
               

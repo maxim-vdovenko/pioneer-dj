@@ -134,7 +134,7 @@ export default class Main extends Component {
         <StepsChange />
         <VideoBox />
         <SliderImages data={sliderImagesData} positionCenter={true} />
-        <NewsComp data={newsData} main={true} />
+        <NewsComp data={newsData} dataClass={'main'} />
         <HelpChoosing />
         <OtherProjects />
       </>

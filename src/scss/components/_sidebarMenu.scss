@@ -1,5 +1,15 @@
 .sidebarMenu {
-  @include block();
+  position: fixed;
+  width: 162px;
+
+  @media (max-width: $screen_xl) {
+    width: 168px;
+  }
+
+  &.absBottom {
+    position: absolute;
+    bottom: 0;
+  }
 
   &__list {
     @include block();

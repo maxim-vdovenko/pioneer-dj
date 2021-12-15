@@ -4,11 +4,9 @@ import Title from './Title';
 
 export default class NewsComp extends Component {
   render() {
-
     const data = this.props.data
     const title = data.title
     const box = data.box
-    const column = data.column
     const more = data.more
 
     const boxMap = box.map((item, index) => 
@@ -18,7 +16,7 @@ export default class NewsComp extends Component {
     )
 
     return (
-      <div className="news news--main">
+      <div className={`news ${this.props.dataClass ? 'news--' + this.props.dataClass : ''}`}>
 
         {title &&
           <Title
@@ -30,7 +28,7 @@ export default class NewsComp extends Component {
 
         <div className="container">
 
-          <div className={column ? 'news__cont news__cont--' + column : 'news__cont'}>
+          <div className='news__cont'>
             {boxMap}
           </div>
 
@@ -43,7 +41,6 @@ export default class NewsComp extends Component {
               <span className="titleShowMore__butt">{more.text[0]} <b>6</b> {more.text[1]}</span>
             </div>
           }
-
         </div>
 
       </div>

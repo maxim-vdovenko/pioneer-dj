@@ -101,11 +101,28 @@
         text-align: center;
       }
 
-      span {
+      i {
+        font-style: normal;
         font-size: inherit;
         line-height: inherit;
         letter-spacing: inherit;
         color: $color_text_blue;
+        // background: linear-gradient(0deg, #09AFE9 0%, #1FDBCB 100%, #8AA9D6);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+      }
+
+      b {
+        @include inline_block();
+        font-style: normal;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+
+        @media (max-width: $screen_md) {
+          @include block(center);
+        }
       }
     }
   }

@@ -100,6 +100,14 @@ export default class MobileMenu extends Component {
               </ul>
             </div>
 
+            <div className="mobileMenu__menu-box">
+              <a className="mobileMenu__menu-title" href="#">Как добраться?</a>
+            </div>
+
+            <div className="mobileMenu__menu-box">
+              <a className="mobileMenu__menu-title" href="tel:+ 7 916  942 5248">+ 7 916  942 5248</a>
+            </div>
+
           </div>
 
         </div>

@@ -8,8 +8,8 @@ export default class StepsChange extends Component {
 
         <Title
           value={[
-            ['dark', '4 шага'],
-            ['red', 'к переменам в жизни']
+            ['red', '4 шага'],
+            ['dark', 'к переменам в жизни']
           ]}
         />
 

@@ -11,6 +11,7 @@ import HelpChoosing from '../components/HelpChoosing';
 import NewsImg1 from '../img/news/img-1.jpg'; 
 import NewsImg2 from '../img/news/img-2.jpg'; 
 import NewsImg3 from '../img/news/img-3.jpg'; 
+import NewsImg4 from '../img/news/img-4.jpg'; 
 
 export default class NewsDetail extends Component {
   render() {
@@ -22,7 +23,6 @@ export default class NewsDetail extends Component {
         ],
         mobile: false
       },
-      column: 'three',
       box: [
         {
           link: '/news/detail',
@@ -35,6 +35,10 @@ export default class NewsDetail extends Component {
         {
           link: '/news/detail',
           srcImg: NewsImg3
+        },
+        {
+          link: '/news/detail',
+          srcImg: NewsImg4
         }
       ]
     }
@@ -56,7 +60,7 @@ export default class NewsDetail extends Component {
 
               <div className="doubleBlock__cont">
                 <NewsDetailComp />
-                <NewsComp data={newsData} />
+                <NewsComp data={newsData} dataClass={'detail'} />
                 <HelpChoosing inside={true} />
               </div>
               

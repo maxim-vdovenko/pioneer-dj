@@ -1,4 +1,5 @@
 .studentReviews {
+  $rev: &;
   @include block();
   margin-top: 165px;
 
@@ -25,6 +26,15 @@
     @media (max-width: $screen_lg) {
       width: auto;
       min-width: 200px;
+    }
+
+    &.active {
+      #{$rev}__img:after {
+        backdrop-filter: blur(0);
+      }
+      #{$rev}__name:after {
+        backdrop-filter: blur(0);
+      }
     }
   }
 
@@ -68,14 +78,26 @@
     left: 10px;
     bottom: 10px;
     min-height: 28px;
-    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.3);
-    background-color: rgba(174, 174, 174, 0.3);
-    border: 1px solid rgba(238, 238, 238, 0.2);
-    backdrop-filter: blur(5px);
-    border-radius: 8px;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
     color: $color_white;
+
+    &:after {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.3);
+      background-color: rgba(174, 174, 174, 0.3);
+      border: 1px solid rgba(238, 238, 238, 0.2);
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      backdrop-filter: blur(3px);
+    }
   }
 }

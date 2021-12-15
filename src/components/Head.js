@@ -33,7 +33,7 @@ export default class Head extends Component {
 
           </div>
 
-          <a className="button-play" href="#"></a>
+          <a className="button-play" href="#"><span></span></a>
 
         </div>
 

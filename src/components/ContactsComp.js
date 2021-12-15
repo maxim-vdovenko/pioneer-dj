@@ -41,7 +41,7 @@ export default class ContactsComp extends Component {
             <div className="contacts__item-bl">
               <div className="contacts__item-img"><img src={ImgInfo} alt="img" /></div>
               <span className="contacts__item-name">Как добраться от метро?</span>
-              <a className="button-play button-play--white" href="#"></a>
+              <a className="button-play button-play--white" href="#"><span></span></a>
             </div>
           </div>
 

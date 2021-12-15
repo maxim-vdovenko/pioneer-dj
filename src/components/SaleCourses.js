@@ -14,8 +14,6 @@ export default class SaleCourses extends Component {
             ['dark', 'Курсы, на которые действует'],
             ['red', 'акция']
           ]}
-          valueLink={'Все курсы'}
-          link={'#'}
         />
 
         <div className="container">
@@ -191,8 +189,6 @@ export default class SaleCourses extends Component {
             </div>
 
           </div>
-
-          <div className="titleLink"><a href="#">Все курсы</a></div>
 
         </div>
        

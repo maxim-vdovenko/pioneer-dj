@@ -19,7 +19,7 @@ export default class Combo extends Component {
         name: 'Акция <br> Комбо обучение',
         addclass: 'internal'
       },
-      text: ['Выбери два курса и получи <span>скидку 20%</span'],
+      text: ['Выбери два курса <b>и получи <i>скидку 20%</i></b>'],
       link: {
         name: 'Оставить заявку',
         src: '#'
