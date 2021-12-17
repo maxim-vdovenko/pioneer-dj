@@ -113,6 +113,14 @@
       color: inherit;
     }
   }
+
+  &--mobile {
+    display: none;
+
+    @media (max-width: $screen_md) {
+      display: flex;
+    }
+  }
 }
 
 .inputBox {

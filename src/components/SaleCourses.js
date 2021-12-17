@@ -190,6 +190,10 @@ export default class SaleCourses extends Component {
 
           </div>
 
+          <div className="titleShowMore titleShowMore--mobile">
+            <span className="titleShowMore__butt">Показать еще <b>3</b> курса</span>
+          </div>
+
         </div>
        
       </div>

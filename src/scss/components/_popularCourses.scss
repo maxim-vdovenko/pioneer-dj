@@ -17,7 +17,7 @@
 
     @media (max-width: $screen_md) {
       margin-top: 38px;
-      margin-bottom: 0;
+      margin-bottom: 12px;
     }
   }
 
@@ -179,6 +179,10 @@
       @media (max-width: $screen_md) {
         &:not(:last-child) {
           margin-bottom: 24px;
+        }
+
+        &:not(:nth-child(-n + 3)) {
+          display: none;
         }
       }
     }
