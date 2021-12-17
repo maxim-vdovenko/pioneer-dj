@@ -14,7 +14,7 @@ export default class SliderImages extends Component {
 
     const settings = {
       dots: false,
-      infinite: true,
+      infinite: pos,
       fade: false,
       arrows: true,
       speed: 400,
@@ -26,13 +26,13 @@ export default class SliderImages extends Component {
       variableWidth: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      beforeChange: next => this.setState({ 
-        activeSlide: next
-      }),
+      afterChange: next => this.setState({activeSlide: next}),
       responsive: [
         {
           breakpoint: 768,
           settings: {
+            infinite: false,
+            centerMode: false,
             draggable: true,
             pauseOnHover: true,
             pauseOnFocus: true
