@@ -43,12 +43,43 @@ export default class Main extends Component {
       title: {
         name: 'Pioneer DJ School'
       },
-      text: ['Единственная сертифицированная школа диджеинга от бренда Pioneer DJ в России'],
+      text: ['Единственная в России <br> Официальная школа бренда Pioneer DJ'],
       link: {
         name: 'Бесплатный пробный урок',
         src: '#'
       }
     }
+
+    const sliderBoxsData = [
+      {
+        title: 'Индивидуальное обучение',
+        link: '#'
+      },
+      {
+        title: 'Флагманское оборудование',
+        link: '#'
+      },
+      {
+        title: 'Большой тренинг - класс',
+        link: '#'
+      },
+      {
+        title: 'Продвижение выпускников',
+        link: '#'
+      },
+      {
+        title: 'Скидки на оборудование',
+        link: '#'
+      },
+      {
+        title: 'Большой тренинг - класс',
+        link: '#'
+      },
+      {
+        title: 'Индивидуальное обучение',
+        link: '#'
+      }
+    ]
 
     const newsData = {
       title: {
@@ -96,6 +127,33 @@ export default class Main extends Component {
       ]
     }
 
+    const stepsChangeData = {
+      title: {
+        value: [
+          ['red', '4 шага'],
+          ['dark', 'к переменам в жизни']
+        ],
+      },
+      val: [
+        {
+          title: 'Получаете только практические знания и навыки',
+          text: 'Только практические уроки один-на-один с преподавателем с методическими материалами, которые остаются у вас'
+        },
+        {
+          title: 'Практикуетесь сколько нужно на оборудовании в школе',
+          text: 'На всем оборудовании DJ Центра безлимитно и бесплатно, записываться не нужно, просто приходите, когда удобно'
+        },
+        {
+          title: 'Защищаете свою экзаменационную работу',
+          text: 'К концу обучения создадите свой микс, мы снимем выступление на видео и отправим на аттестацию в Pioneer DJ в Лондон'
+        },
+        {
+          title: 'Вступаете в систему продвижения Pioneer DJ Family',
+          text: 'Продвижение в проф. соц.сетях, закрытые мастер-классы, организация выступлений (в том числе оплачиваемых)'
+        }
+      ]
+    }
+
     const sliderImagesData = {
       title: {
         value: [
@@ -125,13 +183,13 @@ export default class Main extends Component {
         <Header />
         
         <Head data={heatData} />
-        <SliderBoxs />
+        <SliderBoxs data={sliderBoxsData} />
         <PopularCourses />
         <TeachersMain />
         <StudentReviews />
         <TrialLesson />
         <LogoSlider />
-        <StepsChange />
+        <StepsChange data={stepsChangeData} />
         <VideoBox />
         <SliderImages data={sliderImagesData} positionCenter={true} />
         <NewsComp data={newsData} dataClass={'main'} />

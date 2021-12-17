@@ -10,7 +10,7 @@
     border-radius: 12px;
 
     @media (max-width: $screen_lg) {
-      @include image('trial-lesson/mobile-1.png', 100% auto, left 0 top -30px);
+      @include image('trial-lesson/mobile-1.svg', 100% auto, left 0 top -30px);
       padding: 185px 40px 50px 40px;
     }
 
@@ -25,7 +25,7 @@
     }
 
     @media (max-width: $screen_xs) {
-      background-position: left 0 top 15px !important;
+      @include image('trial-lesson/mobile-2.svg', 100% auto, left 0 top -15px);
     }
 
     &:before, &:after {
@@ -42,11 +42,11 @@
     }
 
     &:before {
-      @include image('trial-lesson/fon-1.png', auto 100%, right 295px top 0);
+      @include image('trial-lesson/fon-1.svg', auto 100%, right 295px top 0);
     }
 
     &:after {
-      @include image('trial-lesson/fon-2.png', auto 100%, right 98px top 0);
+      @include image('trial-lesson/fon-2.svg', auto 100%, right 98px top 0);
     }
   }
 
@@ -71,7 +71,7 @@
     }
 
     p {
-      max-width: 592px;
+      max-width: 605px;
       font-size: 14px;
       line-height: 20px;
       color: #C6C6C6;

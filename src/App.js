@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 
 import Main from './pages/Main';
 import Combo from './pages/Combo';
+import Course from './pages/Course';
 
 import Teachers from './pages/Teachers';
 import TeachersDetail from './pages/TeachersDetail';
@@ -28,6 +29,7 @@ class App extends Component {
             <Routes>
               <Route path="/" element={<Main />} />
               <Route path="/combo" element={<Combo />} />
+              <Route path="/course" element={<Course />} />
 
               <Route path="/teachers" element={<Teachers />} />
               <Route path="/teachers/detail" element={<TeachersDetail />} />

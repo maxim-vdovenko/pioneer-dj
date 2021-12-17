@@ -143,7 +143,7 @@ export default class Header extends Component {
                             <a className="header__submenu-name" href="#">Курсы диджеинга</a>
                             <div className="header__submenu-list">
                               <ul>
-                                <li><a href="#">Базовый DJ Курс</a></li>
+                                <li><NavLink to="/course">Базовый DJ Курс</NavLink></li>
                                 <li><a href="#">PRO DJ Курс</a></li>
                                 <li><a href="#">Kids DJ курс</a><b>для детей</b></li>
                                 <li><a href="#">Интенсив Базовый DJ Курс</a></li>
@@ -205,13 +205,13 @@ export default class Header extends Component {
                               <ul>
                                 <li><a href="#">О школе</a></li>
                                 <li><a href="#">Фото школы</a></li>
-                                <li><Link to="/teachers">Преподаватели</Link></li>
+                                <li><NavLink to="/teachers">Преподаватели</NavLink></li>
                                 <li><a href="#">Pioneer DJ Family</a></li>
                               </ul>
                               <ul>
-                                <li><Link to="/news">Новости и акции</Link></li>
+                                <li><NavLink to="/news">Новости и акции</NavLink></li>
                                 <li><a href="#">Отзывы</a></li>
-                                <li><Link to="/contacts">Контакты</Link></li>
+                                <li><NavLink to="/contacts">Контакты</NavLink></li>
                               </ul>
                             </div>
                           </div>
@@ -277,8 +277,8 @@ export default class Header extends Component {
 function Combo() {
   return (
     <>
-      <Link className="header__submenu-name" to="/combo">Акция Комбо</Link>
-      <Link className="header__submenu-discount" to="/combo"><img src={DiscountImg} alt="img" /></Link>
+      <NavLink className="header__submenu-name" to="/combo">Акция Комбо</NavLink>
+      <NavLink className="header__submenu-discount" to="/combo"><img src={DiscountImg} alt="img" /></NavLink>
     </>
   )
 }

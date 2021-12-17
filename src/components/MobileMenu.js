@@ -12,8 +12,8 @@ export default class MobileMenu extends Component {
           <div className="mobileMenu__menu">
 
             <div className="mobileMenu__menu-discount">
-              <Link className="mobileMenu__menu-discount-img" to="/combo"><img src={DiscountImg} alt="img" /></Link>
-              <Link className="mobileMenu__menu-discount-val" to="/combo">Акция Комбо</Link>
+              <NavLink className="mobileMenu__menu-discount-img" to="/combo"><img src={DiscountImg} alt="img" /></NavLink>
+              <NavLink className="mobileMenu__menu-discount-val" to="/combo">Акция Комбо</NavLink>
             </div>
 
             <div className="mobileMenu__menu-box">
@@ -28,7 +28,7 @@ export default class MobileMenu extends Component {
                   <div className="mobileMenu__menu-butt"></div>
 
                   <ul className="mobileMenu__menu-list">
-                    <li><a href="#">Базовый DJ Курс</a></li>
+                    <li><NavLink to="/course">Базовый DJ Курс</NavLink></li>
                     <li><a href="#">PRO DJ Курс</a></li>
                     <li><a href="#">Kids DJ курс</a><b>для детей</b></li>
                     <li><a href="#">Интенсив Базовый DJ Курс</a></li>
@@ -79,11 +79,11 @@ export default class MobileMenu extends Component {
               <ul className="mobileMenu__menu-list">
                 <li><a href="#">О школе</a></li>
                 <li><a href="#">Фото школы</a></li>
-                <li><Link to="/teachers">Преподаватели</Link></li>
+                <li><NavLink to="/teachers">Преподаватели</NavLink></li>
                 <li><a href="#">Pioneer DJ Family</a></li>
-                <li><Link to="/news">Новости и акции</Link></li>
+                <li><NavLink to="/news">Новости и акции</NavLink></li>
                 <li><a href="#">Отзывы</a></li>
-                <li><Link to="/contacts">Контакты</Link></li>
+                <li><NavLink to="/contacts">Контакты</NavLink></li>
               </ul>
             </div>
 

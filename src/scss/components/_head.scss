@@ -87,7 +87,7 @@
     }
 
     > p {
-      max-width: 525px;
+      max-width: 600px;
       font-size: 18px;
       line-height: 30px;
       letter-spacing: 0.02em;
@@ -107,9 +107,6 @@
         line-height: inherit;
         letter-spacing: inherit;
         color: $color_text_blue;
-        // background: linear-gradient(0deg, #09AFE9 0%, #1FDBCB 100%, #8AA9D6);
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
       }
 
       b {
