@@ -81,7 +81,7 @@ export default class Header extends Component {
     butt.forEach(element => {
       element.addEventListener('click', event => {
         const th = event.target
-        const btn = th.parentElement.querySelector('.mobileMenu__menu-butt')
+        const btn = th.parentElement.querySelector('.mobileMenu .button-plus')
         const lst = th.parentElement.querySelector('.mobileMenu__menu-list')
 
         if (btn.classList.contains('active')) {
@@ -97,7 +97,7 @@ export default class Header extends Component {
     subbutt.forEach(element => {
       element.addEventListener('click', event => {
         const th = event.target
-        const btn = th.parentElement.querySelector('.mobileMenu__menu-butt')
+        const btn = th.parentElement.querySelector('.mobileMenu .button-plus')
         const lst = th.parentElement.querySelector('.mobileMenu__menu-list')
 
         if (btn.classList.contains('active')) {
@@ -140,46 +140,46 @@ export default class Header extends Component {
                           </div>
 
                           <div className="header__submenu-box">
-                            <a className="header__submenu-name" href="#">Курсы диджеинга</a>
+                            <NavLink className="header__submenu-name" to="/course">Курсы диджеинга</NavLink>
                             <div className="header__submenu-list">
                               <ul>
                                 <li><NavLink to="/course">Базовый DJ Курс</NavLink></li>
-                                <li><a href="#">PRO DJ Курс</a></li>
-                                <li><a href="#">Kids DJ курс</a><b>для детей</b></li>
-                                <li><a href="#">Интенсив Базовый DJ Курс</a></li>
-                                <li><a href="#">Интенсив PRO DJ Курс</a></li>
+                                <li><NavLink to="/course">PRO DJ Курс</NavLink></li>
+                                <li><NavLink to="/course">Kids DJ курс</NavLink><b>для детей</b></li>
+                                <li><NavLink to="/course">Интенсив Базовый DJ Курс</NavLink></li>
+                                <li><NavLink to="/course">Интенсив PRO DJ Курс</NavLink></li>
                               </ul>
                             </div>
                           </div>
 
                           <div className="header__submenu-box">
-                            <a className="header__submenu-name" href="#">Написание музыки</a>
+                            <NavLink className="header__submenu-name" to="/course">Написание музыки</NavLink>
                             <div className="header__submenu-list">
                               <ul>
-                                <li><a href="#">Базовый курс по написанию музыки</a></li>
-                                <li><a href="#">PRO курс по написанию музыки</a></li>
-                                <li><a href="#">Интенсив Базовый курс написания музыки</a></li>
-                                <li><a href="#">Интенсив PRO курс написания музыки</a></li>
+                                <li><NavLink to="/course">Базовый курс по написанию музыки</NavLink></li>
+                                <li><NavLink to="/course">PRO курс по написанию музыки</NavLink></li>
+                                <li><NavLink to="/course">Интенсив Базовый курс написания музыки</NavLink></li>
+                                <li><NavLink to="/course">Интенсив PRO курс написания музыки</NavLink></li>
                               </ul>
                             </div>
                           </div>
 
                           <div className="header__submenu-box">
-                            <a className="header__submenu-name" href="#">Авторские курсы</a>
+                            <NavLink className="header__submenu-name" to="/course">Авторские курсы</NavLink>
                             <div className="header__submenu-list">
                               <ul>
-                                <li><a href="#">Scratch курс от DJ SCREAM ОNE</a></li>
-                                <li><a href="#">Техничный диджеинг курс от DJ SCREAM ОNE</a></li>
+                                <li><NavLink to="/course">Scratch курс от DJ SCREAM ОNE</NavLink></li>
+                                <li><NavLink to="/course">Техничный диджеинг курс от DJ SCREAM ОNE</NavLink></li>
                               </ul>
                             </div>
                           </div>
 
                           <div className="header__submenu-box">
-                            <a className="header__submenu-name" href="#">Онлайн-курсы</a>
+                            <NavLink className="header__submenu-name" to="/course">Онлайн-курсы</NavLink>
                             <div className="header__submenu-list">
                               <ul>
-                                <li><a href="#">Онлайн Базовый курс написания музыки</a></li>
-                                <li><a href="#">Онлайн PRO курс написания музыки</a></li>
+                                <li><NavLink to="/course">Онлайн Базовый курс написания музыки</NavLink></li>
+                                <li><NavLink to="/course">Онлайн PRO курс написания музыки</NavLink></li>
                               </ul>
                             </div>
                           </div>

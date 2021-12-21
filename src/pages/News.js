@@ -71,6 +71,11 @@ export default class News extends Component {
       ]
     }
 
+    const helpChoosingData = {
+      title: 'Получить полную информацию о курсе',
+      text: 'Остались вопросы? Оставьте свой номер, мы позвоним и ответим на все ваши вопросы'
+    }
+
     return (
       <>
         <MobileMenu />
@@ -88,7 +93,7 @@ export default class News extends Component {
 
               <div className="doubleBlock__cont">
                 <NewsComp data={newsData} dataClass={'comp'} />
-                <HelpChoosing inside={true} />
+                <HelpChoosing data={helpChoosingData} inside={true} />
               </div>
               
             </div>

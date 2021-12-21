@@ -83,7 +83,7 @@
             #{$menu}-title, a {
               padding: 2px 0 20px 0;
             }
-            #{$menu}-butt {
+            .button-plus {
               top: -4px;
             }
           }
@@ -124,9 +124,8 @@
           }
         }
 
-        > li > #{$menu}-butt {
+        > li > .button-plus {
           top: 16px;
-          background-color: transparent;
         }
 
         > li:not(:last-child) {
@@ -146,49 +145,6 @@
       color: $color_text_dark;
       cursor: pointer;
       z-index: 1;
-    }
-
-    &-butt {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      top: 30px;
-      right: 0;
-      border-radius: 1000px;
-      background-color: #fff;
-      cursor: pointer;
-
-      &:before, &:after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-color: #231F20;
-        border-radius: 100px;
-        transition: all 0.2s;
-        content: '';
-      }
-
-      &:before {
-        width: 16px;
-        height: 2px;
-        margin: -1px 0 0 -8px;
-      }
-
-      &:after {
-        width: 2px;
-        height: 16px;
-        margin: -8px 0 0 -1px;
-      }
-
-      &.active {
-        &:before {
-          transform: rotate(45deg);
-        }
-  
-        &:after {
-          transform: rotate(45deg);
-        }
-      }
     }
 
     &-list {

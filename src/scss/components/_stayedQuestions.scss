@@ -1,0 +1,56 @@
+.stayedQuestions {
+  @include block();
+  margin-top: 130px;
+  margin-bottom: 345px;
+
+  @media (max-width: $screen_lg) {
+    margin-bottom: 250px;
+  }
+
+  @media (max-width: $screen_md) {
+    margin-bottom: 160px;
+  }
+
+  &__block {
+    @include flex();
+
+    @media (max-width: $screen_lg) {
+      display: block;
+    }
+  }
+
+  &__side {
+    position: relative;
+
+    &:nth-child(1) {
+      width: 450px;
+      padding: 35px 50px 0 0;
+
+      @media (max-width: $screen_xl) {
+        width: 330px;
+        padding: 35px 20px 0 0;
+      }
+
+      @media (max-width: $screen_lg) {
+        width: auto;
+        padding: 35px 0 0 0;
+      }
+    }
+
+    &:nth-child(2) {
+      flex: 1;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    .accordion__block {
+      margin-top: 0;
+
+      @media (max-width: $screen_lg) {
+        margin-top: 25px;
+      }
+    }
+  }
+}

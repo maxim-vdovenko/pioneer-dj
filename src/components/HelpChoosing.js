@@ -3,15 +3,22 @@ import InputMask from 'react-input-mask';
 
 export default class HelpChoosing extends Component {
   render() {
+
+    const data = this.props.data
     const inside = this.props.inside
+
     return (
-      <div className={`${inside ? 'helpChoosing helpChoosing--inside' : 'helpChoosing'}`}>
+      <div className={`helpChoosing ${inside ? 'helpChoosing--inside' : ''}`}>
         <div className="container">
           <div className="helpChoosing__cont">
 
             <div className="helpChoosing__text">
-              <h2>Поможем в выборе преподавателя и курса</h2>
-              <p>Остались вопросы? Не знаете, что выбрать? Оставьте свой номер, мы позвоним и ответим на все ваши вопросы</p>
+              {data.title && 
+                <h2>{data.title}</h2>
+              }
+              {data.text && 
+                <p>{data.text}</p>
+              }
             </div>
 
             <form className="helpChoosing__form">

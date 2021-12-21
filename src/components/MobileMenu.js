@@ -19,26 +19,26 @@ export default class MobileMenu extends Component {
             <div className="mobileMenu__menu-box">
 
               <span className="mobileMenu__menu-title">Курсы</span>
-              <div className="mobileMenu__menu-butt"></div>
+              <div className="button-plus"></div>
 
               <ul className="mobileMenu__menu-list">
 
                 <li>
                   <span className="mobileMenu__menu-title">Курсы диджеинга</span>
-                  <div className="mobileMenu__menu-butt"></div>
+                  <div className="button-plus button-plus--empty"></div>
 
                   <ul className="mobileMenu__menu-list">
                     <li><NavLink to="/course">Базовый DJ Курс</NavLink></li>
-                    <li><a href="#">PRO DJ Курс</a></li>
-                    <li><a href="#">Kids DJ курс</a><b>для детей</b></li>
-                    <li><a href="#">Интенсив Базовый DJ Курс</a></li>
-                    <li><a href="#">Интенсив PRO DJ Курс</a></li>
+                    <li><NavLink to="/course">PRO DJ Курс</NavLink></li>
+                    <li><NavLink to="/course">Kids DJ курс</NavLink><b>для детей</b></li>
+                    <li><NavLink to="/course">Интенсив Базовый DJ Курс</NavLink></li>
+                    <li><NavLink to="/course">Интенсив PRO DJ Курс</NavLink></li>
                   </ul>
                 </li>
 
                 <li>
                   <span className="mobileMenu__menu-title">Написание музыки</span>
-                  <div className="mobileMenu__menu-butt"></div>
+                  <div className="button-plus button-plus--empty"></div>
 
                   <ul className="mobileMenu__menu-list">
                     <li><a href="#">Базовый курс по написанию музыки</a></li>
@@ -50,7 +50,7 @@ export default class MobileMenu extends Component {
 
                 <li>
                   <span className="mobileMenu__menu-title">Авторские курсы</span>
-                  <div className="mobileMenu__menu-butt"></div>
+                  <div className="button-plus button-plus--empty"></div>
 
                   <ul className="mobileMenu__menu-list">
                     <li><a href="#">Scratch курс от DJ SCREAM ОNE</a></li>
@@ -60,7 +60,7 @@ export default class MobileMenu extends Component {
 
                 <li>
                   <span className="mobileMenu__menu-title">Онлайн-курсы</span>
-                  <div className="mobileMenu__menu-butt"></div>
+                  <div className="button-plus button-plus--empty"></div>
 
                   <ul className="mobileMenu__menu-list">
                     <li><a href="#">Онлайн Базовый курс написания музыки</a></li>
@@ -74,7 +74,7 @@ export default class MobileMenu extends Component {
 
             <div className="mobileMenu__menu-box">
               <span className="mobileMenu__menu-title">О школе</span>
-              <div className="mobileMenu__menu-butt"></div>
+              <div className="button-plus"></div>
 
               <ul className="mobileMenu__menu-list">
                 <li><a href="#">О школе</a></li>
@@ -89,7 +89,7 @@ export default class MobileMenu extends Component {
 
             <div className="mobileMenu__menu-box">
               <span className="mobileMenu__menu-title">Услуги</span>
-              <div className="mobileMenu__menu-butt"></div>
+              <div className="button-plus"></div>
 
               <ul className="mobileMenu__menu-list">
                 <li><a href="#">Подарочный сертификат</a></li>

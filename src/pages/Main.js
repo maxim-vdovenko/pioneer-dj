@@ -177,6 +177,11 @@ export default class Main extends Component {
       ]
     }
 
+    const helpChoosingData = {
+      title: 'Получить полную информацию о курсе',
+      text: 'Остались вопросы? Оставьте свой номер, мы позвоним и ответим на все ваши вопросы'
+    }
+
     return (
       <>
         <MobileMenu />
@@ -189,11 +194,11 @@ export default class Main extends Component {
         <StudentReviews />
         <TrialLesson />
         <LogoSlider />
-        <StepsChange data={stepsChangeData} />
+        <StepsChange data={stepsChangeData} view={'numbering'} />
         <VideoBox />
         <SliderImages data={sliderImagesData} positionCenter={true} />
         <NewsComp data={newsData} dataClass={'main'} />
-        <HelpChoosing />
+        <HelpChoosing data={helpChoosingData} />
         <OtherProjects />
       </>
     )

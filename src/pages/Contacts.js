@@ -9,6 +9,12 @@ import HelpChoosing from '../components/HelpChoosing';
 
 export default class Contacts extends Component {
   render() {
+
+    const helpChoosingData = {
+      title: 'Получить полную информацию о курсе',
+      text: 'Остались вопросы? Оставьте свой номер, мы позвоним и ответим на все ваши вопросы'
+    }
+
     return (
       <>
         <MobileMenu />
@@ -26,7 +32,7 @@ export default class Contacts extends Component {
 
               <div className="doubleBlock__cont">
                 <ContactsComp />
-                <HelpChoosing inside={true} />
+                <HelpChoosing data={helpChoosingData} inside={true} />
               </div>
               
             </div>

@@ -1,0 +1,144 @@
+.enrollCourse {
+  $enroll: &;
+  @include block();
+  margin-top: 160px;
+
+  &__cont {
+    @include flex();
+    @include image('help-choosing/fon-1.svg', auto 100%, right 40px top 0);
+    justify-content: flex-start;
+    min-height: 368px;
+    background-color: #1C1C1C;
+    border-radius: 12px;
+
+    @media (max-width: $screen_lg) {
+      @include image('help-choosing/mobile-1.svg', auto 100%, left 10px top 0);
+      display: block;
+    }
+
+    @media (max-width: $screen_md) {
+      @include image('help-choosing/mobile-2.svg', 100% auto, left 0 top -70px);
+    }
+
+    @media (max-width: $screen_sm) {
+      background-position: left 0 top -30px !important;
+    }
+
+    @media (max-width: $screen_xs) {
+      background-position: left 0 top 0 !important;
+    }
+  }
+
+  &__text {
+    @include flex();
+    flex-direction: column;
+    width: 50%;
+    padding: 77px 0 60px 60px;
+
+    @media (max-width: $screen_xl) {
+      width: 55%;
+    }
+
+    @media (max-width: $screen_lg) {
+      display: block;
+      width: auto;
+      padding: 64px 60px 0 200px;
+    }
+
+    @media (max-width: $screen_md) {
+      padding: 123px 30px 0 30px;
+    }
+
+    > h2 {
+      margin-bottom: 20px;
+      font-family: 'ZonaPro', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 56px;
+      color: $color_text_white;
+
+      @media (max-width: $screen_lg) {
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: $screen_md) {
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  &__textList {
+    @include block();
+
+    li {
+      @include block();
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #B9B9B9;
+    }
+  }
+
+  &__price {
+    @include block();
+    margin-bottom: 25px;
+    font-family: 'ZonaPro', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    color: $color_text_blue;
+    white-space: nowrap;
+    text-transform: uppercase;
+    background: linear-gradient(0deg, #09AFE9 0%, #1FDBCB 100%, #8AA9D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: $screen_md) {
+      margin-bottom: 13px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__form {
+    @include flex();
+    flex-direction: column;
+    width: 312px;
+    padding: 58px 0 0 0;
+    margin-left: 40px;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+      width: auto;
+      padding: 60px 60px 80px 200px;
+      margin-left: 0;
+    }
+
+    @media (max-width: $screen_md) {
+      padding: 30px 30px 40px 30px;
+    }
+
+    &-info {
+      @include block();
+      margin-bottom: 22px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #B9B9B9;
+
+      @media (max-width: $screen_md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .inputBox, .button {
+      width: 100%;
+    }
+
+    .inputBox {
+      margin-bottom: 20px;
+    }
+  }
+}
